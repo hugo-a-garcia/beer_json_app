@@ -9,8 +9,8 @@ part of 'style.dart';
 _$StyleImpl _$$StyleImplFromJson(Map<String, dynamic> json) => _$StyleImpl(
       name: json['name'] as String,
       category: json['category'] as String,
-      categoryId: (json['category_id'] as num).toInt(),
-      styleId: json['styleId'] as String,
+      categoryId: json['category_id'] as String,
+      styleId: json['style_id'] as String,
     );
 
 Map<String, dynamic> _$$StyleImplToJson(_$StyleImpl instance) =>
@@ -18,5 +18,5 @@ Map<String, dynamic> _$$StyleImplToJson(_$StyleImpl instance) =>
       'name': instance.name,
       'category': instance.category,
       'category_id': instance.categoryId,
-      'styleId': instance.styleId,
+      'style_id': instance.styleId,
     };

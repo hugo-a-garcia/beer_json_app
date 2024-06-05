@@ -23,7 +23,9 @@ mixin _$Style {
   String get name => throw _privateConstructorUsedError;
   String get category => throw _privateConstructorUsedError;
   @JsonKey(name: 'category_id')
-  int get categoryId => throw _privateConstructorUsedError;
+  String get categoryId =>
+      throw _privateConstructorUsedError; //required String category_id,
+  @JsonKey(name: 'style_id')
   String get styleId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,8 +41,8 @@ abstract class $StyleCopyWith<$Res> {
   $Res call(
       {String name,
       String category,
-      @JsonKey(name: 'category_id') int categoryId,
-      String styleId});
+      @JsonKey(name: 'category_id') String categoryId,
+      @JsonKey(name: 'style_id') String styleId});
 }
 
 /// @nodoc
@@ -73,7 +75,7 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
       categoryId: null == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       styleId: null == styleId
           ? _value.styleId
           : styleId // ignore: cast_nullable_to_non_nullable
@@ -92,8 +94,8 @@ abstract class _$$StyleImplCopyWith<$Res> implements $StyleCopyWith<$Res> {
   $Res call(
       {String name,
       String category,
-      @JsonKey(name: 'category_id') int categoryId,
-      String styleId});
+      @JsonKey(name: 'category_id') String categoryId,
+      @JsonKey(name: 'style_id') String styleId});
 }
 
 /// @nodoc
@@ -124,7 +126,7 @@ class __$$StyleImplCopyWithImpl<$Res>
       categoryId: null == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       styleId: null == styleId
           ? _value.styleId
           : styleId // ignore: cast_nullable_to_non_nullable
@@ -140,7 +142,7 @@ class _$StyleImpl implements _Style {
       {required this.name,
       required this.category,
       @JsonKey(name: 'category_id') required this.categoryId,
-      required this.styleId});
+      @JsonKey(name: 'style_id') required this.styleId});
 
   factory _$StyleImpl.fromJson(Map<String, dynamic> json) =>
       _$$StyleImplFromJson(json);
@@ -151,8 +153,10 @@ class _$StyleImpl implements _Style {
   final String category;
   @override
   @JsonKey(name: 'category_id')
-  final int categoryId;
+  final String categoryId;
+//required String category_id,
   @override
+  @JsonKey(name: 'style_id')
   final String styleId;
 
   @override
@@ -196,8 +200,8 @@ abstract class _Style implements Style {
   factory _Style(
       {required final String name,
       required final String category,
-      @JsonKey(name: 'category_id') required final int categoryId,
-      required final String styleId}) = _$StyleImpl;
+      @JsonKey(name: 'category_id') required final String categoryId,
+      @JsonKey(name: 'style_id') required final String styleId}) = _$StyleImpl;
 
   factory _Style.fromJson(Map<String, dynamic> json) = _$StyleImpl.fromJson;
 
@@ -207,8 +211,9 @@ abstract class _Style implements Style {
   String get category;
   @override
   @JsonKey(name: 'category_id')
-  int get categoryId;
-  @override
+  String get categoryId;
+  @override //required String category_id,
+  @JsonKey(name: 'style_id')
   String get styleId;
   @override
   @JsonKey(ignore: true)

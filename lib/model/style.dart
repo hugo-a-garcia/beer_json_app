@@ -8,8 +8,9 @@ class Style with _$Style {
   factory Style({
     required String name,
     required String category,
-    @JsonKey(name: 'category_id') required int categoryId,
-    required String styleId,
+    @JsonKey(name: 'category_id') required String categoryId,
+    //required String category_id,
+    @JsonKey(name: 'style_id') required String styleId,
   }) = _Style;
 
   factory Style.fromJson(Map<String, dynamic> json) => _$StyleFromJson(json);
