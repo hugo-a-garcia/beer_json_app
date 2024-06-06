@@ -23,6 +23,17 @@ _$StyleImpl _$$StyleImplFromJson(Map<String, dynamic> json) => _$StyleImpl(
       tags: json['tags'] as String,
       originalGravity: OriginalGravity.fromJson(
           json['original_gravity'] as Map<String, dynamic>),
+      internationalBitternessUnits: InternationalBitternessUnits.fromJson(
+          json['international_bitterness_units'] as Map<String, dynamic>),
+      finalGravity:
+          FinalGravity.fromJson(json['final_gravity'] as Map<String, dynamic>),
+      alcoholByVolume: AlcoholByVolume.fromJson(
+          json['alcohol_by_volume'] as Map<String, dynamic>),
+      color: Color.fromJson(json['color'] as Map<String, dynamic>),
+      ingredients: json['ingredients'] as String,
+      examples: json['examples'] as String,
+      styleGuide: json['style_guide'] as String,
+      type: json['type'] as String,
     );
 
 Map<String, dynamic> _$$StyleImplToJson(_$StyleImpl instance) =>
@@ -42,6 +53,14 @@ Map<String, dynamic> _$$StyleImplToJson(_$StyleImpl instance) =>
       'style_comparison': instance.styleComparison,
       'tags': instance.tags,
       'original_gravity': instance.originalGravity,
+      'international_bitterness_units': instance.internationalBitternessUnits,
+      'final_gravity': instance.finalGravity,
+      'alcohol_by_volume': instance.alcoholByVolume,
+      'color': instance.color,
+      'ingredients': instance.ingredients,
+      'examples': instance.examples,
+      'style_guide': instance.styleGuide,
+      'type': instance.type,
     };
 
 _$OriginalGravityImpl _$$OriginalGravityImplFromJson(
@@ -53,6 +72,57 @@ _$OriginalGravityImpl _$$OriginalGravityImplFromJson(
 
 Map<String, dynamic> _$$OriginalGravityImplToJson(
         _$OriginalGravityImpl instance) =>
+    <String, dynamic>{
+      'minimum': instance.minimum,
+      'maximum': instance.maximum,
+    };
+
+_$InternationalBitternessUnitsImpl _$$InternationalBitternessUnitsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InternationalBitternessUnitsImpl(
+      minimum: Minimum.fromJson(json['minimum'] as Map<String, dynamic>),
+      maximum: Maximum.fromJson(json['maximum'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$InternationalBitternessUnitsImplToJson(
+        _$InternationalBitternessUnitsImpl instance) =>
+    <String, dynamic>{
+      'minimum': instance.minimum,
+      'maximum': instance.maximum,
+    };
+
+_$FinalGravityImpl _$$FinalGravityImplFromJson(Map<String, dynamic> json) =>
+    _$FinalGravityImpl(
+      minimum: Minimum.fromJson(json['minimum'] as Map<String, dynamic>),
+      maximum: Maximum.fromJson(json['maximum'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$FinalGravityImplToJson(_$FinalGravityImpl instance) =>
+    <String, dynamic>{
+      'minimum': instance.minimum,
+      'maximum': instance.maximum,
+    };
+
+_$AlcoholByVolumeImpl _$$AlcoholByVolumeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AlcoholByVolumeImpl(
+      minimum: Minimum.fromJson(json['minimum'] as Map<String, dynamic>),
+      maximum: Maximum.fromJson(json['maximum'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$AlcoholByVolumeImplToJson(
+        _$AlcoholByVolumeImpl instance) =>
+    <String, dynamic>{
+      'minimum': instance.minimum,
+      'maximum': instance.maximum,
+    };
+
+_$ColorImpl _$$ColorImplFromJson(Map<String, dynamic> json) => _$ColorImpl(
+      minimum: Minimum.fromJson(json['minimum'] as Map<String, dynamic>),
+      maximum: Maximum.fromJson(json['maximum'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ColorImplToJson(_$ColorImpl instance) =>
     <String, dynamic>{
       'minimum': instance.minimum,
       'maximum': instance.maximum,

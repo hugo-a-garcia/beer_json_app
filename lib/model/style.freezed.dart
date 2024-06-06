@@ -41,6 +41,19 @@ mixin _$Style {
   String get tags => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_gravity')
   OriginalGravity get originalGravity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'international_bitterness_units')
+  InternationalBitternessUnits get internationalBitternessUnits =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: 'final_gravity')
+  FinalGravity get finalGravity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'alcohol_by_volume')
+  AlcoholByVolume get alcoholByVolume => throw _privateConstructorUsedError;
+  Color get color => throw _privateConstructorUsedError;
+  String get ingredients => throw _privateConstructorUsedError;
+  String get examples => throw _privateConstructorUsedError;
+  @JsonKey(name: 'style_guide')
+  String get styleGuide => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,9 +80,22 @@ abstract class $StyleCopyWith<$Res> {
       String history,
       @JsonKey(name: 'style_comparison') String styleComparison,
       String tags,
-      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity});
+      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity,
+      @JsonKey(name: 'international_bitterness_units')
+      InternationalBitternessUnits internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') FinalGravity finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume alcoholByVolume,
+      Color color,
+      String ingredients,
+      String examples,
+      @JsonKey(name: 'style_guide') String styleGuide,
+      String type});
 
   $OriginalGravityCopyWith<$Res> get originalGravity;
+  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits;
+  $FinalGravityCopyWith<$Res> get finalGravity;
+  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume;
+  $ColorCopyWith<$Res> get color;
 }
 
 /// @nodoc
@@ -100,6 +126,14 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
     Object? styleComparison = null,
     Object? tags = null,
     Object? originalGravity = null,
+    Object? internationalBitternessUnits = null,
+    Object? finalGravity = null,
+    Object? alcoholByVolume = null,
+    Object? color = null,
+    Object? ingredients = null,
+    Object? examples = null,
+    Object? styleGuide = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -162,6 +196,38 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
           ? _value.originalGravity
           : originalGravity // ignore: cast_nullable_to_non_nullable
               as OriginalGravity,
+      internationalBitternessUnits: null == internationalBitternessUnits
+          ? _value.internationalBitternessUnits
+          : internationalBitternessUnits // ignore: cast_nullable_to_non_nullable
+              as InternationalBitternessUnits,
+      finalGravity: null == finalGravity
+          ? _value.finalGravity
+          : finalGravity // ignore: cast_nullable_to_non_nullable
+              as FinalGravity,
+      alcoholByVolume: null == alcoholByVolume
+          ? _value.alcoholByVolume
+          : alcoholByVolume // ignore: cast_nullable_to_non_nullable
+              as AlcoholByVolume,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+      ingredients: null == ingredients
+          ? _value.ingredients
+          : ingredients // ignore: cast_nullable_to_non_nullable
+              as String,
+      examples: null == examples
+          ? _value.examples
+          : examples // ignore: cast_nullable_to_non_nullable
+              as String,
+      styleGuide: null == styleGuide
+          ? _value.styleGuide
+          : styleGuide // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -170,6 +236,40 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
   $OriginalGravityCopyWith<$Res> get originalGravity {
     return $OriginalGravityCopyWith<$Res>(_value.originalGravity, (value) {
       return _then(_value.copyWith(originalGravity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits {
+    return $InternationalBitternessUnitsCopyWith<$Res>(
+        _value.internationalBitternessUnits, (value) {
+      return _then(
+          _value.copyWith(internationalBitternessUnits: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FinalGravityCopyWith<$Res> get finalGravity {
+    return $FinalGravityCopyWith<$Res>(_value.finalGravity, (value) {
+      return _then(_value.copyWith(finalGravity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume {
+    return $AlcoholByVolumeCopyWith<$Res>(_value.alcoholByVolume, (value) {
+      return _then(_value.copyWith(alcoholByVolume: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ColorCopyWith<$Res> get color {
+    return $ColorCopyWith<$Res>(_value.color, (value) {
+      return _then(_value.copyWith(color: value) as $Val);
     });
   }
 }
@@ -196,10 +296,27 @@ abstract class _$$StyleImplCopyWith<$Res> implements $StyleCopyWith<$Res> {
       String history,
       @JsonKey(name: 'style_comparison') String styleComparison,
       String tags,
-      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity});
+      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity,
+      @JsonKey(name: 'international_bitterness_units')
+      InternationalBitternessUnits internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') FinalGravity finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume alcoholByVolume,
+      Color color,
+      String ingredients,
+      String examples,
+      @JsonKey(name: 'style_guide') String styleGuide,
+      String type});
 
   @override
   $OriginalGravityCopyWith<$Res> get originalGravity;
+  @override
+  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits;
+  @override
+  $FinalGravityCopyWith<$Res> get finalGravity;
+  @override
+  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume;
+  @override
+  $ColorCopyWith<$Res> get color;
 }
 
 /// @nodoc
@@ -228,6 +345,14 @@ class __$$StyleImplCopyWithImpl<$Res>
     Object? styleComparison = null,
     Object? tags = null,
     Object? originalGravity = null,
+    Object? internationalBitternessUnits = null,
+    Object? finalGravity = null,
+    Object? alcoholByVolume = null,
+    Object? color = null,
+    Object? ingredients = null,
+    Object? examples = null,
+    Object? styleGuide = null,
+    Object? type = null,
   }) {
     return _then(_$StyleImpl(
       name: null == name
@@ -290,6 +415,38 @@ class __$$StyleImplCopyWithImpl<$Res>
           ? _value.originalGravity
           : originalGravity // ignore: cast_nullable_to_non_nullable
               as OriginalGravity,
+      internationalBitternessUnits: null == internationalBitternessUnits
+          ? _value.internationalBitternessUnits
+          : internationalBitternessUnits // ignore: cast_nullable_to_non_nullable
+              as InternationalBitternessUnits,
+      finalGravity: null == finalGravity
+          ? _value.finalGravity
+          : finalGravity // ignore: cast_nullable_to_non_nullable
+              as FinalGravity,
+      alcoholByVolume: null == alcoholByVolume
+          ? _value.alcoholByVolume
+          : alcoholByVolume // ignore: cast_nullable_to_non_nullable
+              as AlcoholByVolume,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
+      ingredients: null == ingredients
+          ? _value.ingredients
+          : ingredients // ignore: cast_nullable_to_non_nullable
+              as String,
+      examples: null == examples
+          ? _value.examples
+          : examples // ignore: cast_nullable_to_non_nullable
+              as String,
+      styleGuide: null == styleGuide
+          ? _value.styleGuide
+          : styleGuide // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -312,7 +469,16 @@ class _$StyleImpl implements _Style {
       required this.history,
       @JsonKey(name: 'style_comparison') required this.styleComparison,
       required this.tags,
-      @JsonKey(name: 'original_gravity') required this.originalGravity});
+      @JsonKey(name: 'original_gravity') required this.originalGravity,
+      @JsonKey(name: 'international_bitterness_units')
+      required this.internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') required this.finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') required this.alcoholByVolume,
+      required this.color,
+      required this.ingredients,
+      required this.examples,
+      @JsonKey(name: 'style_guide') required this.styleGuide,
+      required this.type});
 
   factory _$StyleImpl.fromJson(Map<String, dynamic> json) =>
       _$$StyleImplFromJson(json);
@@ -353,10 +519,30 @@ class _$StyleImpl implements _Style {
   @override
   @JsonKey(name: 'original_gravity')
   final OriginalGravity originalGravity;
+  @override
+  @JsonKey(name: 'international_bitterness_units')
+  final InternationalBitternessUnits internationalBitternessUnits;
+  @override
+  @JsonKey(name: 'final_gravity')
+  final FinalGravity finalGravity;
+  @override
+  @JsonKey(name: 'alcohol_by_volume')
+  final AlcoholByVolume alcoholByVolume;
+  @override
+  final Color color;
+  @override
+  final String ingredients;
+  @override
+  final String examples;
+  @override
+  @JsonKey(name: 'style_guide')
+  final String styleGuide;
+  @override
+  final String type;
 
   @override
   String toString() {
-    return 'Style(name: $name, category: $category, categoryId: $categoryId, styleId: $styleId, categoryDescription: $categoryDescription, overallImpression: $overallImpression, aroma: $aroma, appearance: $appearance, flavor: $flavor, mouthfeel: $mouthfeel, comments: $comments, history: $history, styleComparison: $styleComparison, tags: $tags, originalGravity: $originalGravity)';
+    return 'Style(name: $name, category: $category, categoryId: $categoryId, styleId: $styleId, categoryDescription: $categoryDescription, overallImpression: $overallImpression, aroma: $aroma, appearance: $appearance, flavor: $flavor, mouthfeel: $mouthfeel, comments: $comments, history: $history, styleComparison: $styleComparison, tags: $tags, originalGravity: $originalGravity, internationalBitternessUnits: $internationalBitternessUnits, finalGravity: $finalGravity, alcoholByVolume: $alcoholByVolume, color: $color, ingredients: $ingredients, examples: $examples, styleGuide: $styleGuide, type: $type)';
   }
 
   @override
@@ -387,28 +573,53 @@ class _$StyleImpl implements _Style {
                 other.styleComparison == styleComparison) &&
             (identical(other.tags, tags) || other.tags == tags) &&
             (identical(other.originalGravity, originalGravity) ||
-                other.originalGravity == originalGravity));
+                other.originalGravity == originalGravity) &&
+            (identical(other.internationalBitternessUnits,
+                    internationalBitternessUnits) ||
+                other.internationalBitternessUnits ==
+                    internationalBitternessUnits) &&
+            (identical(other.finalGravity, finalGravity) ||
+                other.finalGravity == finalGravity) &&
+            (identical(other.alcoholByVolume, alcoholByVolume) ||
+                other.alcoholByVolume == alcoholByVolume) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.ingredients, ingredients) ||
+                other.ingredients == ingredients) &&
+            (identical(other.examples, examples) ||
+                other.examples == examples) &&
+            (identical(other.styleGuide, styleGuide) ||
+                other.styleGuide == styleGuide) &&
+            (identical(other.type, type) || other.type == type));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      name,
-      category,
-      categoryId,
-      styleId,
-      categoryDescription,
-      overallImpression,
-      aroma,
-      appearance,
-      flavor,
-      mouthfeel,
-      comments,
-      history,
-      styleComparison,
-      tags,
-      originalGravity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        name,
+        category,
+        categoryId,
+        styleId,
+        categoryDescription,
+        overallImpression,
+        aroma,
+        appearance,
+        flavor,
+        mouthfeel,
+        comments,
+        history,
+        styleComparison,
+        tags,
+        originalGravity,
+        internationalBitternessUnits,
+        finalGravity,
+        alcoholByVolume,
+        color,
+        ingredients,
+        examples,
+        styleGuide,
+        type
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -443,7 +654,17 @@ abstract class _Style implements Style {
       @JsonKey(name: 'style_comparison') required final String styleComparison,
       required final String tags,
       @JsonKey(name: 'original_gravity')
-      required final OriginalGravity originalGravity}) = _$StyleImpl;
+      required final OriginalGravity originalGravity,
+      @JsonKey(name: 'international_bitterness_units')
+      required final InternationalBitternessUnits internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') required final FinalGravity finalGravity,
+      @JsonKey(name: 'alcohol_by_volume')
+      required final AlcoholByVolume alcoholByVolume,
+      required final Color color,
+      required final String ingredients,
+      required final String examples,
+      @JsonKey(name: 'style_guide') required final String styleGuide,
+      required final String type}) = _$StyleImpl;
 
   factory _Style.fromJson(Map<String, dynamic> json) = _$StyleImpl.fromJson;
 
@@ -483,6 +704,26 @@ abstract class _Style implements Style {
   @override
   @JsonKey(name: 'original_gravity')
   OriginalGravity get originalGravity;
+  @override
+  @JsonKey(name: 'international_bitterness_units')
+  InternationalBitternessUnits get internationalBitternessUnits;
+  @override
+  @JsonKey(name: 'final_gravity')
+  FinalGravity get finalGravity;
+  @override
+  @JsonKey(name: 'alcohol_by_volume')
+  AlcoholByVolume get alcoholByVolume;
+  @override
+  Color get color;
+  @override
+  String get ingredients;
+  @override
+  String get examples;
+  @override
+  @JsonKey(name: 'style_guide')
+  String get styleGuide;
+  @override
+  String get type;
   @override
   @JsonKey(ignore: true)
   _$$StyleImplCopyWith<_$StyleImpl> get copyWith =>
@@ -665,6 +906,729 @@ abstract class _OriginalGravity implements OriginalGravity {
   @override
   @JsonKey(ignore: true)
   _$$OriginalGravityImplCopyWith<_$OriginalGravityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InternationalBitternessUnits _$InternationalBitternessUnitsFromJson(
+    Map<String, dynamic> json) {
+  return _InternationalBitternessUnits.fromJson(json);
+}
+
+/// @nodoc
+mixin _$InternationalBitternessUnits {
+  Minimum get minimum => throw _privateConstructorUsedError;
+  Maximum get maximum => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InternationalBitternessUnitsCopyWith<InternationalBitternessUnits>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InternationalBitternessUnitsCopyWith<$Res> {
+  factory $InternationalBitternessUnitsCopyWith(
+          InternationalBitternessUnits value,
+          $Res Function(InternationalBitternessUnits) then) =
+      _$InternationalBitternessUnitsCopyWithImpl<$Res,
+          InternationalBitternessUnits>;
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  $MinimumCopyWith<$Res> get minimum;
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class _$InternationalBitternessUnitsCopyWithImpl<$Res,
+        $Val extends InternationalBitternessUnits>
+    implements $InternationalBitternessUnitsCopyWith<$Res> {
+  _$InternationalBitternessUnitsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_value.copyWith(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MinimumCopyWith<$Res> get minimum {
+    return $MinimumCopyWith<$Res>(_value.minimum, (value) {
+      return _then(_value.copyWith(minimum: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaximumCopyWith<$Res> get maximum {
+    return $MaximumCopyWith<$Res>(_value.maximum, (value) {
+      return _then(_value.copyWith(maximum: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$InternationalBitternessUnitsImplCopyWith<$Res>
+    implements $InternationalBitternessUnitsCopyWith<$Res> {
+  factory _$$InternationalBitternessUnitsImplCopyWith(
+          _$InternationalBitternessUnitsImpl value,
+          $Res Function(_$InternationalBitternessUnitsImpl) then) =
+      __$$InternationalBitternessUnitsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  @override
+  $MinimumCopyWith<$Res> get minimum;
+  @override
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class __$$InternationalBitternessUnitsImplCopyWithImpl<$Res>
+    extends _$InternationalBitternessUnitsCopyWithImpl<$Res,
+        _$InternationalBitternessUnitsImpl>
+    implements _$$InternationalBitternessUnitsImplCopyWith<$Res> {
+  __$$InternationalBitternessUnitsImplCopyWithImpl(
+      _$InternationalBitternessUnitsImpl _value,
+      $Res Function(_$InternationalBitternessUnitsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_$InternationalBitternessUnitsImpl(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InternationalBitternessUnitsImpl
+    implements _InternationalBitternessUnits {
+  _$InternationalBitternessUnitsImpl(
+      {required this.minimum, required this.maximum});
+
+  factory _$InternationalBitternessUnitsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$InternationalBitternessUnitsImplFromJson(json);
+
+  @override
+  final Minimum minimum;
+  @override
+  final Maximum maximum;
+
+  @override
+  String toString() {
+    return 'InternationalBitternessUnits(minimum: $minimum, maximum: $maximum)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InternationalBitternessUnitsImpl &&
+            (identical(other.minimum, minimum) || other.minimum == minimum) &&
+            (identical(other.maximum, maximum) || other.maximum == maximum));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, minimum, maximum);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InternationalBitternessUnitsImplCopyWith<
+          _$InternationalBitternessUnitsImpl>
+      get copyWith => __$$InternationalBitternessUnitsImplCopyWithImpl<
+          _$InternationalBitternessUnitsImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InternationalBitternessUnitsImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _InternationalBitternessUnits
+    implements InternationalBitternessUnits {
+  factory _InternationalBitternessUnits(
+      {required final Minimum minimum,
+      required final Maximum maximum}) = _$InternationalBitternessUnitsImpl;
+
+  factory _InternationalBitternessUnits.fromJson(Map<String, dynamic> json) =
+      _$InternationalBitternessUnitsImpl.fromJson;
+
+  @override
+  Minimum get minimum;
+  @override
+  Maximum get maximum;
+  @override
+  @JsonKey(ignore: true)
+  _$$InternationalBitternessUnitsImplCopyWith<
+          _$InternationalBitternessUnitsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+FinalGravity _$FinalGravityFromJson(Map<String, dynamic> json) {
+  return _FinalGravity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FinalGravity {
+  Minimum get minimum => throw _privateConstructorUsedError;
+  Maximum get maximum => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FinalGravityCopyWith<FinalGravity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FinalGravityCopyWith<$Res> {
+  factory $FinalGravityCopyWith(
+          FinalGravity value, $Res Function(FinalGravity) then) =
+      _$FinalGravityCopyWithImpl<$Res, FinalGravity>;
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  $MinimumCopyWith<$Res> get minimum;
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class _$FinalGravityCopyWithImpl<$Res, $Val extends FinalGravity>
+    implements $FinalGravityCopyWith<$Res> {
+  _$FinalGravityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_value.copyWith(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MinimumCopyWith<$Res> get minimum {
+    return $MinimumCopyWith<$Res>(_value.minimum, (value) {
+      return _then(_value.copyWith(minimum: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaximumCopyWith<$Res> get maximum {
+    return $MaximumCopyWith<$Res>(_value.maximum, (value) {
+      return _then(_value.copyWith(maximum: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$FinalGravityImplCopyWith<$Res>
+    implements $FinalGravityCopyWith<$Res> {
+  factory _$$FinalGravityImplCopyWith(
+          _$FinalGravityImpl value, $Res Function(_$FinalGravityImpl) then) =
+      __$$FinalGravityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  @override
+  $MinimumCopyWith<$Res> get minimum;
+  @override
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class __$$FinalGravityImplCopyWithImpl<$Res>
+    extends _$FinalGravityCopyWithImpl<$Res, _$FinalGravityImpl>
+    implements _$$FinalGravityImplCopyWith<$Res> {
+  __$$FinalGravityImplCopyWithImpl(
+      _$FinalGravityImpl _value, $Res Function(_$FinalGravityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_$FinalGravityImpl(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FinalGravityImpl implements _FinalGravity {
+  _$FinalGravityImpl({required this.minimum, required this.maximum});
+
+  factory _$FinalGravityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FinalGravityImplFromJson(json);
+
+  @override
+  final Minimum minimum;
+  @override
+  final Maximum maximum;
+
+  @override
+  String toString() {
+    return 'FinalGravity(minimum: $minimum, maximum: $maximum)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FinalGravityImpl &&
+            (identical(other.minimum, minimum) || other.minimum == minimum) &&
+            (identical(other.maximum, maximum) || other.maximum == maximum));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, minimum, maximum);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FinalGravityImplCopyWith<_$FinalGravityImpl> get copyWith =>
+      __$$FinalGravityImplCopyWithImpl<_$FinalGravityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FinalGravityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FinalGravity implements FinalGravity {
+  factory _FinalGravity(
+      {required final Minimum minimum,
+      required final Maximum maximum}) = _$FinalGravityImpl;
+
+  factory _FinalGravity.fromJson(Map<String, dynamic> json) =
+      _$FinalGravityImpl.fromJson;
+
+  @override
+  Minimum get minimum;
+  @override
+  Maximum get maximum;
+  @override
+  @JsonKey(ignore: true)
+  _$$FinalGravityImplCopyWith<_$FinalGravityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AlcoholByVolume _$AlcoholByVolumeFromJson(Map<String, dynamic> json) {
+  return _AlcoholByVolume.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AlcoholByVolume {
+  Minimum get minimum => throw _privateConstructorUsedError;
+  Maximum get maximum => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AlcoholByVolumeCopyWith<AlcoholByVolume> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AlcoholByVolumeCopyWith<$Res> {
+  factory $AlcoholByVolumeCopyWith(
+          AlcoholByVolume value, $Res Function(AlcoholByVolume) then) =
+      _$AlcoholByVolumeCopyWithImpl<$Res, AlcoholByVolume>;
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  $MinimumCopyWith<$Res> get minimum;
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class _$AlcoholByVolumeCopyWithImpl<$Res, $Val extends AlcoholByVolume>
+    implements $AlcoholByVolumeCopyWith<$Res> {
+  _$AlcoholByVolumeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_value.copyWith(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MinimumCopyWith<$Res> get minimum {
+    return $MinimumCopyWith<$Res>(_value.minimum, (value) {
+      return _then(_value.copyWith(minimum: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaximumCopyWith<$Res> get maximum {
+    return $MaximumCopyWith<$Res>(_value.maximum, (value) {
+      return _then(_value.copyWith(maximum: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$AlcoholByVolumeImplCopyWith<$Res>
+    implements $AlcoholByVolumeCopyWith<$Res> {
+  factory _$$AlcoholByVolumeImplCopyWith(_$AlcoholByVolumeImpl value,
+          $Res Function(_$AlcoholByVolumeImpl) then) =
+      __$$AlcoholByVolumeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  @override
+  $MinimumCopyWith<$Res> get minimum;
+  @override
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class __$$AlcoholByVolumeImplCopyWithImpl<$Res>
+    extends _$AlcoholByVolumeCopyWithImpl<$Res, _$AlcoholByVolumeImpl>
+    implements _$$AlcoholByVolumeImplCopyWith<$Res> {
+  __$$AlcoholByVolumeImplCopyWithImpl(
+      _$AlcoholByVolumeImpl _value, $Res Function(_$AlcoholByVolumeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_$AlcoholByVolumeImpl(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AlcoholByVolumeImpl implements _AlcoholByVolume {
+  _$AlcoholByVolumeImpl({required this.minimum, required this.maximum});
+
+  factory _$AlcoholByVolumeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AlcoholByVolumeImplFromJson(json);
+
+  @override
+  final Minimum minimum;
+  @override
+  final Maximum maximum;
+
+  @override
+  String toString() {
+    return 'AlcoholByVolume(minimum: $minimum, maximum: $maximum)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlcoholByVolumeImpl &&
+            (identical(other.minimum, minimum) || other.minimum == minimum) &&
+            (identical(other.maximum, maximum) || other.maximum == maximum));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, minimum, maximum);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AlcoholByVolumeImplCopyWith<_$AlcoholByVolumeImpl> get copyWith =>
+      __$$AlcoholByVolumeImplCopyWithImpl<_$AlcoholByVolumeImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AlcoholByVolumeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AlcoholByVolume implements AlcoholByVolume {
+  factory _AlcoholByVolume(
+      {required final Minimum minimum,
+      required final Maximum maximum}) = _$AlcoholByVolumeImpl;
+
+  factory _AlcoholByVolume.fromJson(Map<String, dynamic> json) =
+      _$AlcoholByVolumeImpl.fromJson;
+
+  @override
+  Minimum get minimum;
+  @override
+  Maximum get maximum;
+  @override
+  @JsonKey(ignore: true)
+  _$$AlcoholByVolumeImplCopyWith<_$AlcoholByVolumeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Color _$ColorFromJson(Map<String, dynamic> json) {
+  return _Color.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Color {
+  Minimum get minimum => throw _privateConstructorUsedError;
+  Maximum get maximum => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ColorCopyWith<Color> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ColorCopyWith<$Res> {
+  factory $ColorCopyWith(Color value, $Res Function(Color) then) =
+      _$ColorCopyWithImpl<$Res, Color>;
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  $MinimumCopyWith<$Res> get minimum;
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class _$ColorCopyWithImpl<$Res, $Val extends Color>
+    implements $ColorCopyWith<$Res> {
+  _$ColorCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_value.copyWith(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MinimumCopyWith<$Res> get minimum {
+    return $MinimumCopyWith<$Res>(_value.minimum, (value) {
+      return _then(_value.copyWith(minimum: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MaximumCopyWith<$Res> get maximum {
+    return $MaximumCopyWith<$Res>(_value.maximum, (value) {
+      return _then(_value.copyWith(maximum: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ColorImplCopyWith<$Res> implements $ColorCopyWith<$Res> {
+  factory _$$ColorImplCopyWith(
+          _$ColorImpl value, $Res Function(_$ColorImpl) then) =
+      __$$ColorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Minimum minimum, Maximum maximum});
+
+  @override
+  $MinimumCopyWith<$Res> get minimum;
+  @override
+  $MaximumCopyWith<$Res> get maximum;
+}
+
+/// @nodoc
+class __$$ColorImplCopyWithImpl<$Res>
+    extends _$ColorCopyWithImpl<$Res, _$ColorImpl>
+    implements _$$ColorImplCopyWith<$Res> {
+  __$$ColorImplCopyWithImpl(
+      _$ColorImpl _value, $Res Function(_$ColorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? minimum = null,
+    Object? maximum = null,
+  }) {
+    return _then(_$ColorImpl(
+      minimum: null == minimum
+          ? _value.minimum
+          : minimum // ignore: cast_nullable_to_non_nullable
+              as Minimum,
+      maximum: null == maximum
+          ? _value.maximum
+          : maximum // ignore: cast_nullable_to_non_nullable
+              as Maximum,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ColorImpl implements _Color {
+  _$ColorImpl({required this.minimum, required this.maximum});
+
+  factory _$ColorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ColorImplFromJson(json);
+
+  @override
+  final Minimum minimum;
+  @override
+  final Maximum maximum;
+
+  @override
+  String toString() {
+    return 'Color(minimum: $minimum, maximum: $maximum)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ColorImpl &&
+            (identical(other.minimum, minimum) || other.minimum == minimum) &&
+            (identical(other.maximum, maximum) || other.maximum == maximum));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, minimum, maximum);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ColorImplCopyWith<_$ColorImpl> get copyWith =>
+      __$$ColorImplCopyWithImpl<_$ColorImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ColorImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Color implements Color {
+  factory _Color(
+      {required final Minimum minimum,
+      required final Maximum maximum}) = _$ColorImpl;
+
+  factory _Color.fromJson(Map<String, dynamic> json) = _$ColorImpl.fromJson;
+
+  @override
+  Minimum get minimum;
+  @override
+  Maximum get maximum;
+  @override
+  @JsonKey(ignore: true)
+  _$$ColorImplCopyWith<_$ColorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

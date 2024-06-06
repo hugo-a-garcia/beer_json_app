@@ -42,5 +42,25 @@ void main() {
     expect(json['tags'], aStyle.tags);
     expect(json['original_gravity']['minimum']['unit'],
         aStyle.originalGravity.minimum.unit);
+    expect(json['original_gravity']['maximum']['value'],
+        aStyle.originalGravity.maximum.value);
+    expect(json['international_bitterness_units']['minimum']['unit'],
+        aStyle.internationalBitternessUnits.minimum.unit);
+    expect(json['international_bitterness_units']['maximum']['value'],
+        aStyle.internationalBitternessUnits.maximum.value);
+    expect(json['final_gravity']['minimum']['unit'],
+        aStyle.finalGravity.minimum.unit);
+    expect(json['final_gravity']['maximum']['value'],
+        aStyle.finalGravity.maximum.value);
+    expect(json['alcohol_by_volume']['minimum']['unit'],
+        aStyle.alcoholByVolume.minimum.unit);
+    expect(json['alcohol_by_volume']['maximum']['value'],
+        aStyle.alcoholByVolume.maximum.value);
+    expect(json['color']['minimum']['unit'], aStyle.color.minimum.unit);
+    expect(json['color']['maximum']['value'], aStyle.color.maximum.value);
+    expect(json['ingredients'], aStyle.ingredients);
+    expect(json['examples'], aStyle.examples);
+    expect(json['style_guide'], aStyle.styleGuide);
+    expect(json['type'], aStyle.type);
   });
 }

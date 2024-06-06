@@ -3,15 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'style.freezed.dart';
 part 'style.g.dart';
 
-// part 'original_gravity.freezed.dart';
-// part 'original_gravity.g.dart';
-
-// part 'minimum.freezed.dart';
-// part 'minimum.g.dart';
-
-// part 'maximum.freezed.dart';
-// part 'maximum.g.dart';
-
 @freezed
 class Style with _$Style {
   factory Style({
@@ -30,6 +21,16 @@ class Style with _$Style {
     @JsonKey(name: 'style_comparison') required String styleComparison,
     required String tags,
     @JsonKey(name: 'original_gravity') required OriginalGravity originalGravity,
+    @JsonKey(name: 'international_bitterness_units')
+    required InternationalBitternessUnits internationalBitternessUnits,
+    @JsonKey(name: 'final_gravity') required FinalGravity finalGravity,
+    @JsonKey(name: 'alcohol_by_volume')
+    required AlcoholByVolume alcoholByVolume,
+    required Color color,
+    required String ingredients,
+    required String examples,
+    @JsonKey(name: 'style_guide') required String styleGuide,
+    required String type,
   }) = _Style;
 
   factory Style.fromJson(Map<String, dynamic> json) => _$StyleFromJson(json);
@@ -44,6 +45,49 @@ class OriginalGravity with _$OriginalGravity {
 
   factory OriginalGravity.fromJson(Map<String, dynamic> json) =>
       _$OriginalGravityFromJson(json);
+}
+
+@freezed
+class InternationalBitternessUnits with _$InternationalBitternessUnits {
+  factory InternationalBitternessUnits({
+    required Minimum minimum,
+    required Maximum maximum,
+  }) = _InternationalBitternessUnits;
+
+  factory InternationalBitternessUnits.fromJson(Map<String, dynamic> json) =>
+      _$InternationalBitternessUnitsFromJson(json);
+}
+
+@freezed
+class FinalGravity with _$FinalGravity {
+  factory FinalGravity({
+    required Minimum minimum,
+    required Maximum maximum,
+  }) = _FinalGravity;
+
+  factory FinalGravity.fromJson(Map<String, dynamic> json) =>
+      _$FinalGravityFromJson(json);
+}
+
+@freezed
+class AlcoholByVolume with _$AlcoholByVolume {
+  factory AlcoholByVolume({
+    required Minimum minimum,
+    required Maximum maximum,
+  }) = _AlcoholByVolume;
+
+  factory AlcoholByVolume.fromJson(Map<String, dynamic> json) =>
+      _$AlcoholByVolumeFromJson(json);
+}
+
+@freezed
+class Color with _$Color {
+  factory Color({
+    required Minimum minimum,
+    required Maximum maximum,
+  }) = _Color;
+
+  factory Color.fromJson(Map<String, dynamic> json) => _$ColorFromJson(json);
 }
 
 @freezed
