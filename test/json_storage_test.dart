@@ -7,7 +7,8 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  String jsonString = '''
+  test('Load JSON file as String', () async {
+    String jsonString = '''
 {
   "name": "Belgian Tripel",
   "category": "Monastic Ale",
@@ -15,16 +16,15 @@ void main() {
   "style_id": "26C"
 }
 ''';
-
-  test('Load JSON file as String', () async {
     final expectedStyle = await jsonDecode(jsonString) as Map<String, dynamic>;
-    expect(await loadStyles('assets/json/test.json'), expectedStyle);
+    expect(await loadAndDecodeJson('assets/json/test.json'), expectedStyle);
   });
 
   test('Style properties are cammel cased', () async {
-    final json = await jsonDecode(jsonString) as Map<String, dynamic>;
-    print(json);
+    String jsonPath = 'assets/json/tripel.json';
+    Map<String, dynamic> json = await loadAndDecodeJson(jsonPath);
     Style aStyle = Style.fromJson(json);
+    //Test every property is camelCased
     expect("26", aStyle.categoryId);
     expect('26C', aStyle.styleId);
   });
