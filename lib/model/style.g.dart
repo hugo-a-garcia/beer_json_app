@@ -11,27 +11,38 @@ _$StyleImpl _$$StyleImplFromJson(Map<String, dynamic> json) => _$StyleImpl(
       category: json['category'] as String,
       categoryId: json['category_id'] as String,
       styleId: json['style_id'] as String,
-      categoryDescription: json['category_description'] as String,
-      overallImpression: json['overall_impression'] as String,
-      aroma: json['aroma'] as String,
-      appearance: json['appearance'] as String,
-      flavor: json['flavor'] as String,
-      mouthfeel: json['mouthfeel'] as String,
-      comments: json['comments'] as String,
-      history: json['history'] as String,
-      styleComparison: json['style_comparison'] as String,
-      tags: json['tags'] as String,
-      originalGravity: OriginalGravity.fromJson(
-          json['original_gravity'] as Map<String, dynamic>),
-      internationalBitternessUnits: InternationalBitternessUnits.fromJson(
-          json['international_bitterness_units'] as Map<String, dynamic>),
-      finalGravity:
-          FinalGravity.fromJson(json['final_gravity'] as Map<String, dynamic>),
-      alcoholByVolume: AlcoholByVolume.fromJson(
-          json['alcohol_by_volume'] as Map<String, dynamic>),
-      color: Color.fromJson(json['color'] as Map<String, dynamic>),
-      ingredients: json['ingredients'] as String,
-      examples: json['examples'] as String,
+      categoryDescription: json['category_description'] as String?,
+      overallImpression: json['overall_impression'] as String?,
+      aroma: json['aroma'] as String?,
+      appearance: json['appearance'] as String?,
+      flavor: json['flavor'] as String?,
+      mouthfeel: json['mouthfeel'] as String?,
+      comments: json['comments'] as String?,
+      history: json['history'] as String?,
+      styleComparison: json['style_comparison'] as String?,
+      tags: json['tags'] as String?,
+      originalGravity: json['original_gravity'] == null
+          ? null
+          : OriginalGravity.fromJson(
+              json['original_gravity'] as Map<String, dynamic>),
+      internationalBitternessUnits: json['international_bitterness_units'] ==
+              null
+          ? null
+          : InternationalBitternessUnits.fromJson(
+              json['international_bitterness_units'] as Map<String, dynamic>),
+      finalGravity: json['final_gravity'] == null
+          ? null
+          : FinalGravity.fromJson(
+              json['final_gravity'] as Map<String, dynamic>),
+      alcoholByVolume: json['alcohol_by_volume'] == null
+          ? null
+          : AlcoholByVolume.fromJson(
+              json['alcohol_by_volume'] as Map<String, dynamic>),
+      color: json['color'] == null
+          ? null
+          : Color.fromJson(json['color'] as Map<String, dynamic>),
+      ingredients: json['ingredients'] as String?,
+      examples: json['examples'] as String?,
       styleGuide: json['style_guide'] as String,
       type: json['type'] as String,
     );

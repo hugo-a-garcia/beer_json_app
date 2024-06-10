@@ -27,30 +27,30 @@ mixin _$Style {
   @JsonKey(name: 'style_id')
   String get styleId => throw _privateConstructorUsedError;
   @JsonKey(name: 'category_description')
-  String get categoryDescription => throw _privateConstructorUsedError;
+  String? get categoryDescription => throw _privateConstructorUsedError;
   @JsonKey(name: 'overall_impression')
-  String get overallImpression => throw _privateConstructorUsedError;
-  String get aroma => throw _privateConstructorUsedError;
-  String get appearance => throw _privateConstructorUsedError;
-  String get flavor => throw _privateConstructorUsedError;
-  String get mouthfeel => throw _privateConstructorUsedError;
-  String get comments => throw _privateConstructorUsedError;
-  String get history => throw _privateConstructorUsedError;
+  String? get overallImpression => throw _privateConstructorUsedError;
+  String? get aroma => throw _privateConstructorUsedError;
+  String? get appearance => throw _privateConstructorUsedError;
+  String? get flavor => throw _privateConstructorUsedError;
+  String? get mouthfeel => throw _privateConstructorUsedError;
+  String? get comments => throw _privateConstructorUsedError;
+  String? get history => throw _privateConstructorUsedError;
   @JsonKey(name: 'style_comparison')
-  String get styleComparison => throw _privateConstructorUsedError;
-  String get tags => throw _privateConstructorUsedError;
+  String? get styleComparison => throw _privateConstructorUsedError;
+  String? get tags => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_gravity')
-  OriginalGravity get originalGravity => throw _privateConstructorUsedError;
+  OriginalGravity? get originalGravity => throw _privateConstructorUsedError;
   @JsonKey(name: 'international_bitterness_units')
-  InternationalBitternessUnits get internationalBitternessUnits =>
+  InternationalBitternessUnits? get internationalBitternessUnits =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'final_gravity')
-  FinalGravity get finalGravity => throw _privateConstructorUsedError;
+  FinalGravity? get finalGravity => throw _privateConstructorUsedError;
   @JsonKey(name: 'alcohol_by_volume')
-  AlcoholByVolume get alcoholByVolume => throw _privateConstructorUsedError;
-  Color get color => throw _privateConstructorUsedError;
-  String get ingredients => throw _privateConstructorUsedError;
-  String get examples => throw _privateConstructorUsedError;
+  AlcoholByVolume? get alcoholByVolume => throw _privateConstructorUsedError;
+  Color? get color => throw _privateConstructorUsedError;
+  String? get ingredients => throw _privateConstructorUsedError;
+  String? get examples => throw _privateConstructorUsedError;
   @JsonKey(name: 'style_guide')
   String get styleGuide => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
@@ -70,32 +70,32 @@ abstract class $StyleCopyWith<$Res> {
       String category,
       @JsonKey(name: 'category_id') String categoryId,
       @JsonKey(name: 'style_id') String styleId,
-      @JsonKey(name: 'category_description') String categoryDescription,
-      @JsonKey(name: 'overall_impression') String overallImpression,
-      String aroma,
-      String appearance,
-      String flavor,
-      String mouthfeel,
-      String comments,
-      String history,
-      @JsonKey(name: 'style_comparison') String styleComparison,
-      String tags,
-      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity,
+      @JsonKey(name: 'category_description') String? categoryDescription,
+      @JsonKey(name: 'overall_impression') String? overallImpression,
+      String? aroma,
+      String? appearance,
+      String? flavor,
+      String? mouthfeel,
+      String? comments,
+      String? history,
+      @JsonKey(name: 'style_comparison') String? styleComparison,
+      String? tags,
+      @JsonKey(name: 'original_gravity') OriginalGravity? originalGravity,
       @JsonKey(name: 'international_bitterness_units')
-      InternationalBitternessUnits internationalBitternessUnits,
-      @JsonKey(name: 'final_gravity') FinalGravity finalGravity,
-      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume alcoholByVolume,
-      Color color,
-      String ingredients,
-      String examples,
+      InternationalBitternessUnits? internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') FinalGravity? finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume? alcoholByVolume,
+      Color? color,
+      String? ingredients,
+      String? examples,
       @JsonKey(name: 'style_guide') String styleGuide,
       String type});
 
-  $OriginalGravityCopyWith<$Res> get originalGravity;
-  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits;
-  $FinalGravityCopyWith<$Res> get finalGravity;
-  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume;
-  $ColorCopyWith<$Res> get color;
+  $OriginalGravityCopyWith<$Res>? get originalGravity;
+  $InternationalBitternessUnitsCopyWith<$Res>? get internationalBitternessUnits;
+  $FinalGravityCopyWith<$Res>? get finalGravity;
+  $AlcoholByVolumeCopyWith<$Res>? get alcoholByVolume;
+  $ColorCopyWith<$Res>? get color;
 }
 
 /// @nodoc
@@ -115,23 +115,23 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
     Object? category = null,
     Object? categoryId = null,
     Object? styleId = null,
-    Object? categoryDescription = null,
-    Object? overallImpression = null,
-    Object? aroma = null,
-    Object? appearance = null,
-    Object? flavor = null,
-    Object? mouthfeel = null,
-    Object? comments = null,
-    Object? history = null,
-    Object? styleComparison = null,
-    Object? tags = null,
-    Object? originalGravity = null,
-    Object? internationalBitternessUnits = null,
-    Object? finalGravity = null,
-    Object? alcoholByVolume = null,
-    Object? color = null,
-    Object? ingredients = null,
-    Object? examples = null,
+    Object? categoryDescription = freezed,
+    Object? overallImpression = freezed,
+    Object? aroma = freezed,
+    Object? appearance = freezed,
+    Object? flavor = freezed,
+    Object? mouthfeel = freezed,
+    Object? comments = freezed,
+    Object? history = freezed,
+    Object? styleComparison = freezed,
+    Object? tags = freezed,
+    Object? originalGravity = freezed,
+    Object? internationalBitternessUnits = freezed,
+    Object? finalGravity = freezed,
+    Object? alcoholByVolume = freezed,
+    Object? color = freezed,
+    Object? ingredients = freezed,
+    Object? examples = freezed,
     Object? styleGuide = null,
     Object? type = null,
   }) {
@@ -152,74 +152,74 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
           ? _value.styleId
           : styleId // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryDescription: null == categoryDescription
+      categoryDescription: freezed == categoryDescription
           ? _value.categoryDescription
           : categoryDescription // ignore: cast_nullable_to_non_nullable
-              as String,
-      overallImpression: null == overallImpression
+              as String?,
+      overallImpression: freezed == overallImpression
           ? _value.overallImpression
           : overallImpression // ignore: cast_nullable_to_non_nullable
-              as String,
-      aroma: null == aroma
+              as String?,
+      aroma: freezed == aroma
           ? _value.aroma
           : aroma // ignore: cast_nullable_to_non_nullable
-              as String,
-      appearance: null == appearance
+              as String?,
+      appearance: freezed == appearance
           ? _value.appearance
           : appearance // ignore: cast_nullable_to_non_nullable
-              as String,
-      flavor: null == flavor
+              as String?,
+      flavor: freezed == flavor
           ? _value.flavor
           : flavor // ignore: cast_nullable_to_non_nullable
-              as String,
-      mouthfeel: null == mouthfeel
+              as String?,
+      mouthfeel: freezed == mouthfeel
           ? _value.mouthfeel
           : mouthfeel // ignore: cast_nullable_to_non_nullable
-              as String,
-      comments: null == comments
+              as String?,
+      comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as String,
-      history: null == history
+              as String?,
+      history: freezed == history
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
-              as String,
-      styleComparison: null == styleComparison
+              as String?,
+      styleComparison: freezed == styleComparison
           ? _value.styleComparison
           : styleComparison // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      originalGravity: null == originalGravity
+              as String?,
+      originalGravity: freezed == originalGravity
           ? _value.originalGravity
           : originalGravity // ignore: cast_nullable_to_non_nullable
-              as OriginalGravity,
-      internationalBitternessUnits: null == internationalBitternessUnits
+              as OriginalGravity?,
+      internationalBitternessUnits: freezed == internationalBitternessUnits
           ? _value.internationalBitternessUnits
           : internationalBitternessUnits // ignore: cast_nullable_to_non_nullable
-              as InternationalBitternessUnits,
-      finalGravity: null == finalGravity
+              as InternationalBitternessUnits?,
+      finalGravity: freezed == finalGravity
           ? _value.finalGravity
           : finalGravity // ignore: cast_nullable_to_non_nullable
-              as FinalGravity,
-      alcoholByVolume: null == alcoholByVolume
+              as FinalGravity?,
+      alcoholByVolume: freezed == alcoholByVolume
           ? _value.alcoholByVolume
           : alcoholByVolume // ignore: cast_nullable_to_non_nullable
-              as AlcoholByVolume,
-      color: null == color
+              as AlcoholByVolume?,
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as Color,
-      ingredients: null == ingredients
+              as Color?,
+      ingredients: freezed == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as String,
-      examples: null == examples
+              as String?,
+      examples: freezed == examples
           ? _value.examples
           : examples // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       styleGuide: null == styleGuide
           ? _value.styleGuide
           : styleGuide // ignore: cast_nullable_to_non_nullable
@@ -233,17 +233,26 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
 
   @override
   @pragma('vm:prefer-inline')
-  $OriginalGravityCopyWith<$Res> get originalGravity {
-    return $OriginalGravityCopyWith<$Res>(_value.originalGravity, (value) {
+  $OriginalGravityCopyWith<$Res>? get originalGravity {
+    if (_value.originalGravity == null) {
+      return null;
+    }
+
+    return $OriginalGravityCopyWith<$Res>(_value.originalGravity!, (value) {
       return _then(_value.copyWith(originalGravity: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits {
+  $InternationalBitternessUnitsCopyWith<$Res>?
+      get internationalBitternessUnits {
+    if (_value.internationalBitternessUnits == null) {
+      return null;
+    }
+
     return $InternationalBitternessUnitsCopyWith<$Res>(
-        _value.internationalBitternessUnits, (value) {
+        _value.internationalBitternessUnits!, (value) {
       return _then(
           _value.copyWith(internationalBitternessUnits: value) as $Val);
     });
@@ -251,24 +260,36 @@ class _$StyleCopyWithImpl<$Res, $Val extends Style>
 
   @override
   @pragma('vm:prefer-inline')
-  $FinalGravityCopyWith<$Res> get finalGravity {
-    return $FinalGravityCopyWith<$Res>(_value.finalGravity, (value) {
+  $FinalGravityCopyWith<$Res>? get finalGravity {
+    if (_value.finalGravity == null) {
+      return null;
+    }
+
+    return $FinalGravityCopyWith<$Res>(_value.finalGravity!, (value) {
       return _then(_value.copyWith(finalGravity: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume {
-    return $AlcoholByVolumeCopyWith<$Res>(_value.alcoholByVolume, (value) {
+  $AlcoholByVolumeCopyWith<$Res>? get alcoholByVolume {
+    if (_value.alcoholByVolume == null) {
+      return null;
+    }
+
+    return $AlcoholByVolumeCopyWith<$Res>(_value.alcoholByVolume!, (value) {
       return _then(_value.copyWith(alcoholByVolume: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ColorCopyWith<$Res> get color {
-    return $ColorCopyWith<$Res>(_value.color, (value) {
+  $ColorCopyWith<$Res>? get color {
+    if (_value.color == null) {
+      return null;
+    }
+
+    return $ColorCopyWith<$Res>(_value.color!, (value) {
       return _then(_value.copyWith(color: value) as $Val);
     });
   }
@@ -286,37 +307,37 @@ abstract class _$$StyleImplCopyWith<$Res> implements $StyleCopyWith<$Res> {
       String category,
       @JsonKey(name: 'category_id') String categoryId,
       @JsonKey(name: 'style_id') String styleId,
-      @JsonKey(name: 'category_description') String categoryDescription,
-      @JsonKey(name: 'overall_impression') String overallImpression,
-      String aroma,
-      String appearance,
-      String flavor,
-      String mouthfeel,
-      String comments,
-      String history,
-      @JsonKey(name: 'style_comparison') String styleComparison,
-      String tags,
-      @JsonKey(name: 'original_gravity') OriginalGravity originalGravity,
+      @JsonKey(name: 'category_description') String? categoryDescription,
+      @JsonKey(name: 'overall_impression') String? overallImpression,
+      String? aroma,
+      String? appearance,
+      String? flavor,
+      String? mouthfeel,
+      String? comments,
+      String? history,
+      @JsonKey(name: 'style_comparison') String? styleComparison,
+      String? tags,
+      @JsonKey(name: 'original_gravity') OriginalGravity? originalGravity,
       @JsonKey(name: 'international_bitterness_units')
-      InternationalBitternessUnits internationalBitternessUnits,
-      @JsonKey(name: 'final_gravity') FinalGravity finalGravity,
-      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume alcoholByVolume,
-      Color color,
-      String ingredients,
-      String examples,
+      InternationalBitternessUnits? internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') FinalGravity? finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') AlcoholByVolume? alcoholByVolume,
+      Color? color,
+      String? ingredients,
+      String? examples,
       @JsonKey(name: 'style_guide') String styleGuide,
       String type});
 
   @override
-  $OriginalGravityCopyWith<$Res> get originalGravity;
+  $OriginalGravityCopyWith<$Res>? get originalGravity;
   @override
-  $InternationalBitternessUnitsCopyWith<$Res> get internationalBitternessUnits;
+  $InternationalBitternessUnitsCopyWith<$Res>? get internationalBitternessUnits;
   @override
-  $FinalGravityCopyWith<$Res> get finalGravity;
+  $FinalGravityCopyWith<$Res>? get finalGravity;
   @override
-  $AlcoholByVolumeCopyWith<$Res> get alcoholByVolume;
+  $AlcoholByVolumeCopyWith<$Res>? get alcoholByVolume;
   @override
-  $ColorCopyWith<$Res> get color;
+  $ColorCopyWith<$Res>? get color;
 }
 
 /// @nodoc
@@ -334,23 +355,23 @@ class __$$StyleImplCopyWithImpl<$Res>
     Object? category = null,
     Object? categoryId = null,
     Object? styleId = null,
-    Object? categoryDescription = null,
-    Object? overallImpression = null,
-    Object? aroma = null,
-    Object? appearance = null,
-    Object? flavor = null,
-    Object? mouthfeel = null,
-    Object? comments = null,
-    Object? history = null,
-    Object? styleComparison = null,
-    Object? tags = null,
-    Object? originalGravity = null,
-    Object? internationalBitternessUnits = null,
-    Object? finalGravity = null,
-    Object? alcoholByVolume = null,
-    Object? color = null,
-    Object? ingredients = null,
-    Object? examples = null,
+    Object? categoryDescription = freezed,
+    Object? overallImpression = freezed,
+    Object? aroma = freezed,
+    Object? appearance = freezed,
+    Object? flavor = freezed,
+    Object? mouthfeel = freezed,
+    Object? comments = freezed,
+    Object? history = freezed,
+    Object? styleComparison = freezed,
+    Object? tags = freezed,
+    Object? originalGravity = freezed,
+    Object? internationalBitternessUnits = freezed,
+    Object? finalGravity = freezed,
+    Object? alcoholByVolume = freezed,
+    Object? color = freezed,
+    Object? ingredients = freezed,
+    Object? examples = freezed,
     Object? styleGuide = null,
     Object? type = null,
   }) {
@@ -371,74 +392,74 @@ class __$$StyleImplCopyWithImpl<$Res>
           ? _value.styleId
           : styleId // ignore: cast_nullable_to_non_nullable
               as String,
-      categoryDescription: null == categoryDescription
+      categoryDescription: freezed == categoryDescription
           ? _value.categoryDescription
           : categoryDescription // ignore: cast_nullable_to_non_nullable
-              as String,
-      overallImpression: null == overallImpression
+              as String?,
+      overallImpression: freezed == overallImpression
           ? _value.overallImpression
           : overallImpression // ignore: cast_nullable_to_non_nullable
-              as String,
-      aroma: null == aroma
+              as String?,
+      aroma: freezed == aroma
           ? _value.aroma
           : aroma // ignore: cast_nullable_to_non_nullable
-              as String,
-      appearance: null == appearance
+              as String?,
+      appearance: freezed == appearance
           ? _value.appearance
           : appearance // ignore: cast_nullable_to_non_nullable
-              as String,
-      flavor: null == flavor
+              as String?,
+      flavor: freezed == flavor
           ? _value.flavor
           : flavor // ignore: cast_nullable_to_non_nullable
-              as String,
-      mouthfeel: null == mouthfeel
+              as String?,
+      mouthfeel: freezed == mouthfeel
           ? _value.mouthfeel
           : mouthfeel // ignore: cast_nullable_to_non_nullable
-              as String,
-      comments: null == comments
+              as String?,
+      comments: freezed == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as String,
-      history: null == history
+              as String?,
+      history: freezed == history
           ? _value.history
           : history // ignore: cast_nullable_to_non_nullable
-              as String,
-      styleComparison: null == styleComparison
+              as String?,
+      styleComparison: freezed == styleComparison
           ? _value.styleComparison
           : styleComparison // ignore: cast_nullable_to_non_nullable
-              as String,
-      tags: null == tags
+              as String?,
+      tags: freezed == tags
           ? _value.tags
           : tags // ignore: cast_nullable_to_non_nullable
-              as String,
-      originalGravity: null == originalGravity
+              as String?,
+      originalGravity: freezed == originalGravity
           ? _value.originalGravity
           : originalGravity // ignore: cast_nullable_to_non_nullable
-              as OriginalGravity,
-      internationalBitternessUnits: null == internationalBitternessUnits
+              as OriginalGravity?,
+      internationalBitternessUnits: freezed == internationalBitternessUnits
           ? _value.internationalBitternessUnits
           : internationalBitternessUnits // ignore: cast_nullable_to_non_nullable
-              as InternationalBitternessUnits,
-      finalGravity: null == finalGravity
+              as InternationalBitternessUnits?,
+      finalGravity: freezed == finalGravity
           ? _value.finalGravity
           : finalGravity // ignore: cast_nullable_to_non_nullable
-              as FinalGravity,
-      alcoholByVolume: null == alcoholByVolume
+              as FinalGravity?,
+      alcoholByVolume: freezed == alcoholByVolume
           ? _value.alcoholByVolume
           : alcoholByVolume // ignore: cast_nullable_to_non_nullable
-              as AlcoholByVolume,
-      color: null == color
+              as AlcoholByVolume?,
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as Color,
-      ingredients: null == ingredients
+              as Color?,
+      ingredients: freezed == ingredients
           ? _value.ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
-              as String,
-      examples: null == examples
+              as String?,
+      examples: freezed == examples
           ? _value.examples
           : examples // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       styleGuide: null == styleGuide
           ? _value.styleGuide
           : styleGuide // ignore: cast_nullable_to_non_nullable
@@ -459,24 +480,24 @@ class _$StyleImpl implements _Style {
       required this.category,
       @JsonKey(name: 'category_id') required this.categoryId,
       @JsonKey(name: 'style_id') required this.styleId,
-      @JsonKey(name: 'category_description') required this.categoryDescription,
-      @JsonKey(name: 'overall_impression') required this.overallImpression,
-      required this.aroma,
-      required this.appearance,
-      required this.flavor,
-      required this.mouthfeel,
-      required this.comments,
-      required this.history,
-      @JsonKey(name: 'style_comparison') required this.styleComparison,
-      required this.tags,
-      @JsonKey(name: 'original_gravity') required this.originalGravity,
+      @JsonKey(name: 'category_description') this.categoryDescription,
+      @JsonKey(name: 'overall_impression') this.overallImpression,
+      this.aroma,
+      this.appearance,
+      this.flavor,
+      this.mouthfeel,
+      this.comments,
+      this.history,
+      @JsonKey(name: 'style_comparison') this.styleComparison,
+      this.tags,
+      @JsonKey(name: 'original_gravity') this.originalGravity,
       @JsonKey(name: 'international_bitterness_units')
-      required this.internationalBitternessUnits,
-      @JsonKey(name: 'final_gravity') required this.finalGravity,
-      @JsonKey(name: 'alcohol_by_volume') required this.alcoholByVolume,
-      required this.color,
-      required this.ingredients,
-      required this.examples,
+      this.internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') this.finalGravity,
+      @JsonKey(name: 'alcohol_by_volume') this.alcoholByVolume,
+      this.color,
+      this.ingredients,
+      this.examples,
       @JsonKey(name: 'style_guide') required this.styleGuide,
       required this.type});
 
@@ -495,45 +516,45 @@ class _$StyleImpl implements _Style {
   final String styleId;
   @override
   @JsonKey(name: 'category_description')
-  final String categoryDescription;
+  final String? categoryDescription;
   @override
   @JsonKey(name: 'overall_impression')
-  final String overallImpression;
+  final String? overallImpression;
   @override
-  final String aroma;
+  final String? aroma;
   @override
-  final String appearance;
+  final String? appearance;
   @override
-  final String flavor;
+  final String? flavor;
   @override
-  final String mouthfeel;
+  final String? mouthfeel;
   @override
-  final String comments;
+  final String? comments;
   @override
-  final String history;
+  final String? history;
   @override
   @JsonKey(name: 'style_comparison')
-  final String styleComparison;
+  final String? styleComparison;
   @override
-  final String tags;
+  final String? tags;
   @override
   @JsonKey(name: 'original_gravity')
-  final OriginalGravity originalGravity;
+  final OriginalGravity? originalGravity;
   @override
   @JsonKey(name: 'international_bitterness_units')
-  final InternationalBitternessUnits internationalBitternessUnits;
+  final InternationalBitternessUnits? internationalBitternessUnits;
   @override
   @JsonKey(name: 'final_gravity')
-  final FinalGravity finalGravity;
+  final FinalGravity? finalGravity;
   @override
   @JsonKey(name: 'alcohol_by_volume')
-  final AlcoholByVolume alcoholByVolume;
+  final AlcoholByVolume? alcoholByVolume;
   @override
-  final Color color;
+  final Color? color;
   @override
-  final String ingredients;
+  final String? ingredients;
   @override
-  final String examples;
+  final String? examples;
   @override
   @JsonKey(name: 'style_guide')
   final String styleGuide;
@@ -641,28 +662,25 @@ abstract class _Style implements Style {
       required final String category,
       @JsonKey(name: 'category_id') required final String categoryId,
       @JsonKey(name: 'style_id') required final String styleId,
-      @JsonKey(name: 'category_description')
-      required final String categoryDescription,
-      @JsonKey(name: 'overall_impression')
-      required final String overallImpression,
-      required final String aroma,
-      required final String appearance,
-      required final String flavor,
-      required final String mouthfeel,
-      required final String comments,
-      required final String history,
-      @JsonKey(name: 'style_comparison') required final String styleComparison,
-      required final String tags,
-      @JsonKey(name: 'original_gravity')
-      required final OriginalGravity originalGravity,
+      @JsonKey(name: 'category_description') final String? categoryDescription,
+      @JsonKey(name: 'overall_impression') final String? overallImpression,
+      final String? aroma,
+      final String? appearance,
+      final String? flavor,
+      final String? mouthfeel,
+      final String? comments,
+      final String? history,
+      @JsonKey(name: 'style_comparison') final String? styleComparison,
+      final String? tags,
+      @JsonKey(name: 'original_gravity') final OriginalGravity? originalGravity,
       @JsonKey(name: 'international_bitterness_units')
-      required final InternationalBitternessUnits internationalBitternessUnits,
-      @JsonKey(name: 'final_gravity') required final FinalGravity finalGravity,
+      final InternationalBitternessUnits? internationalBitternessUnits,
+      @JsonKey(name: 'final_gravity') final FinalGravity? finalGravity,
       @JsonKey(name: 'alcohol_by_volume')
-      required final AlcoholByVolume alcoholByVolume,
-      required final Color color,
-      required final String ingredients,
-      required final String examples,
+      final AlcoholByVolume? alcoholByVolume,
+      final Color? color,
+      final String? ingredients,
+      final String? examples,
       @JsonKey(name: 'style_guide') required final String styleGuide,
       required final String type}) = _$StyleImpl;
 
@@ -680,45 +698,45 @@ abstract class _Style implements Style {
   String get styleId;
   @override
   @JsonKey(name: 'category_description')
-  String get categoryDescription;
+  String? get categoryDescription;
   @override
   @JsonKey(name: 'overall_impression')
-  String get overallImpression;
+  String? get overallImpression;
   @override
-  String get aroma;
+  String? get aroma;
   @override
-  String get appearance;
+  String? get appearance;
   @override
-  String get flavor;
+  String? get flavor;
   @override
-  String get mouthfeel;
+  String? get mouthfeel;
   @override
-  String get comments;
+  String? get comments;
   @override
-  String get history;
+  String? get history;
   @override
   @JsonKey(name: 'style_comparison')
-  String get styleComparison;
+  String? get styleComparison;
   @override
-  String get tags;
+  String? get tags;
   @override
   @JsonKey(name: 'original_gravity')
-  OriginalGravity get originalGravity;
+  OriginalGravity? get originalGravity;
   @override
   @JsonKey(name: 'international_bitterness_units')
-  InternationalBitternessUnits get internationalBitternessUnits;
+  InternationalBitternessUnits? get internationalBitternessUnits;
   @override
   @JsonKey(name: 'final_gravity')
-  FinalGravity get finalGravity;
+  FinalGravity? get finalGravity;
   @override
   @JsonKey(name: 'alcohol_by_volume')
-  AlcoholByVolume get alcoholByVolume;
+  AlcoholByVolume? get alcoholByVolume;
   @override
-  Color get color;
+  Color? get color;
   @override
-  String get ingredients;
+  String? get ingredients;
   @override
-  String get examples;
+  String? get examples;
   @override
   @JsonKey(name: 'style_guide')
   String get styleGuide;
