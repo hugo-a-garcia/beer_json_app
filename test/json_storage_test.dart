@@ -75,7 +75,11 @@ void main() {
     //Test every property is camelCased
 
     expect(json['beerjson']['version'], guide.beerjson.version);
-    expect(json['beerjson']['styles'][0], guide.beerjson.styles[0].);
+    expect(
+        json['beerjson']['styles'][0]['name'], guide.beerjson.styles[0].name);
+
+    // Could write a test or code to search for he styles that have empty properties
+
     // expect(json['category'], aStyle.category);
     // expect(json['category_id'], aStyle.categoryId);
     // expect(json['style_id'], aStyle.styleId);
@@ -111,5 +115,15 @@ void main() {
     // expect(json['examples'], aStyle.examples);
     // expect(json['style_guide'], aStyle.styleGuide);
     // expect(json['type'], aStyle.type);
+  });
+
+  test('Get styles from model', () async {
+    BJCP21 guide = await getGuide();
+    expect(guide, isNotNull);
+  });
+
+  test('Get style names from guide', () async {
+    List<String> names = getStyleNames();
+    expect(names, isNotEmpty);
   });
 }

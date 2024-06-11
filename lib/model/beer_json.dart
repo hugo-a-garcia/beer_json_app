@@ -14,10 +14,3 @@ class BeerJson with _$BeerJson {
   factory BeerJson.fromJson(Map<String, dynamic> json) =>
       _$BeerJsonFromJson(json);
 }
-
-// @freezed
-// class Styles with _$Styles {
-//   factory Styles(List<Style> styles) = _Styles;
-
-//   factory Styles.fromJson(Map<String, dynamic> json) => _$StylesFromJson(json);
-// }
