@@ -30,7 +30,12 @@ class _BeerGuideStatefulState extends State<BeerGuideStateful> {
             future: guide,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data!.beerjson.version.toString());
+                return ListView.builder(
+                  itemCount: snapshot.data!.beerjson.styles.length,
+                  itemBuilder: (context, index) {
+                    return Text(snapshot.data!.beerjson.styles[index].name);
+                  },
+                );
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               }

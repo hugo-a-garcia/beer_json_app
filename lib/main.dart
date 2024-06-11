@@ -1,4 +1,3 @@
-import 'package:beer_json_app/widgets/beer_guide.dart';
 import 'package:beer_json_app/widgets/beer_guide_stateful.dart';
 import 'package:flutter/material.dart';
 
