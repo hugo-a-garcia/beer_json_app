@@ -1,0 +1,82 @@
+{
+  "beers": [
+    {
+      "beer_name": "Chimay Blauw",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dark Strong Ale",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Chimay Wit",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Tripel",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "La Trappe Blond",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Blond Ale",
+      "guide_category_name": "Strong Belgian Ale"
+    },
+    {
+      "beer_name": "La Trappe Dubbel",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dubbel",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "La Trappe Tripel",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Tripel",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "La Trappe Quadrupel",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dark Strong Ale",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "La Trappe Witte",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Witbier",
+      "guide_category_name": "Belgian Ale"
+    },
+    {
+      "beer_name": "Orval",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Brett",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Rochefort 6",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dubbel",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Rochefort 8",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dark Strong Ale",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Rochefort 10",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dark Strong Ale",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Westmalle Dubbel",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Dubbel",
+      "guide_category_name": "Monastic Ale"
+    },
+    {
+      "beer_name": "Westmalle Tripel",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "Belgian Tripel",
+      "guide_category_name": "Monastic Ale"
+    }
+  ]
+}

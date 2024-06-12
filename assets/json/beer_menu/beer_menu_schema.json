@@ -1,0 +1,36 @@
+{
+  "$id": "https://example.com/arrays.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "A representation of a person, company, organization, or place",
+  "type": "object",
+  "properties": {
+    "beers": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/beer" }
+    }
+  },
+  "$defs": {
+    "beer": {
+      "type": "object",
+      "required": ["beer_name", "bar_menu_category"],
+      "properties": {
+        "beer_name": {
+          "description": "The name of the beer",
+          "type": "string"
+        },
+        "guide_style_name": {
+          "description": "The style of beer in teh BCJP",
+          "type": "string"
+        },
+        "guide_category_name": {
+          "description": "The categroy in the the BCJP",
+          "type": "string"
+        },
+        "bar_menu_category": {
+          "description": "The categroy as it appear on the menu",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

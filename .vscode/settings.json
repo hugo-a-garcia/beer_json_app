@@ -1,0 +1,10 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "beer_menu.json"
+            ],
+            "url": "./assets/json/beer_menu/beer_menu_schema.json"
+        }
+    ]
+}
