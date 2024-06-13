@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
-import 'package:beer_json_app/model/beer_json/json_storage.dart';
+import 'package:beer_json_app/model/model_storage.dart';
 import 'package:beer_json_app/model/beer_json/style.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -67,9 +67,9 @@ void main() {
   });
 
   test('Load beerjosn', () async {
-    String jsonPath = 'assets/json/bjcp_styleguide-2021.json';
+    //String jsonPath = 'assets/json/bjcp_styleguide-2021.json';
     // String jsonPath = 'assets/json/test/style_list.json';
-    Map<String, dynamic> json = await loadAndDecodeJson(jsonPath);
+    Map<String, dynamic> json = await loadAndDecodeJson(bcjpPath);
     BJCP21 guide = BJCP21.fromJson(json);
     //print(guide.beerjson.version);
     //Test every property is camelCased

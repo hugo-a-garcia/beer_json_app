@@ -26,4 +26,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/json/
+    - assets/json/bcjp/
+    - assets/json/beer_menu/
     - assets/json/test/
