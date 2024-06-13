@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:beer_json_app/model/bjcp_21.dart';
-import 'package:beer_json_app/model/style.dart';
+import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
+import 'package:beer_json_app/model/beer_json/style.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 Future<Map<String, dynamic>> loadAndDecodeJson(String path) async {

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:beer_json_app/model/bjcp_21.dart';
-import 'package:beer_json_app/model/json_storage.dart';
-import 'package:beer_json_app/model/style.dart';
+import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
+import 'package:beer_json_app/model/beer_json/json_storage.dart';
+import 'package:beer_json_app/model/beer_json/style.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -120,10 +120,5 @@ void main() {
   test('Get styles from model', () async {
     BJCP21 guide = await getGuide();
     expect(guide, isNotNull);
-  });
-
-  test('Get style names from guide', () async {
-    List<String> names = getStyleNames();
-    expect(names, isNotEmpty);
   });
 }

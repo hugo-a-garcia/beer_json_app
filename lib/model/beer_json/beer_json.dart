@@ -1,4 +1,4 @@
-import 'package:beer_json_app/model/style.dart';
+import 'package:beer_json_app/model/beer_json/style.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'beer_json.freezed.dart';

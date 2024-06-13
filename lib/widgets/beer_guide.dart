@@ -1,4 +1,4 @@
-import 'package:beer_json_app/model/json_storage.dart';
+import 'package:beer_json_app/model/beer_json/json_storage.dart';
 import 'package:flutter/material.dart';
 
 class BeerGuide extends StatelessWidget {
