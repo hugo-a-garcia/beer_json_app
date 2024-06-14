@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:math';
-
 import 'package:beer_json_app/model/beer_menu/beer_menu.dart';
 import 'package:beer_json_app/model/model_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -35,5 +32,6 @@ void main() {
         json['beers'][0]['guide_style_name'], beerMenu.beers[0].guideStyleName);
     expect(json['beers'][0]['guide_category_name'],
         beerMenu.beers[0].guideCategoryName);
+    expect(json['beers'][0]['ebc_color'], beerMenu.beers[0].ebcColor);
   });
 }

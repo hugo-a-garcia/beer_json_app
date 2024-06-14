@@ -23,6 +23,7 @@ _$BeerImpl _$$BeerImplFromJson(Map<String, dynamic> json) => _$BeerImpl(
       barMenuCategory: json['bar_menu_category'] as String,
       guideStyleName: json['guide_style_name'] as String,
       guideCategoryName: json['guide_category_name'] as String,
+      ebcColor: (json['ebc_color'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$BeerImplToJson(_$BeerImpl instance) =>
@@ -31,4 +32,5 @@ Map<String, dynamic> _$$BeerImplToJson(_$BeerImpl instance) =>
       'bar_menu_category': instance.barMenuCategory,
       'guide_style_name': instance.guideStyleName,
       'guide_category_name': instance.guideCategoryName,
+      'ebc_color': instance.ebcColor,
     };

@@ -1,4 +1,4 @@
-import 'package:beer_json_app/widgets/beer_guide_stateful.dart';
+import 'package:beer_json_app/widgets/beer_list.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: BeerGuideStateful(),
+      home: BeerList(),
     );
   }
 }

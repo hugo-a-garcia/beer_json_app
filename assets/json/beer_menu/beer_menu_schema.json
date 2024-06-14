@@ -29,6 +29,10 @@
         "bar_menu_category": {
           "description": "The categroy as it appear on the menu",
           "type": "string"
+        },
+        "ebc_color": {
+          "description": "EBC color",
+          "type": "integer"  
         }
       }
     }

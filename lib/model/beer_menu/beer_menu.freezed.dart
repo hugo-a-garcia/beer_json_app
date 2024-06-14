@@ -169,6 +169,8 @@ mixin _$Beer {
   String get guideStyleName => throw _privateConstructorUsedError;
   @JsonKey(name: 'guide_category_name')
   String get guideCategoryName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ebc_color')
+  int get ebcColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -184,7 +186,8 @@ abstract class $BeerCopyWith<$Res> {
       {@JsonKey(name: 'beer_name') String beerName,
       @JsonKey(name: 'bar_menu_category') String barMenuCategory,
       @JsonKey(name: 'guide_style_name') String guideStyleName,
-      @JsonKey(name: 'guide_category_name') String guideCategoryName});
+      @JsonKey(name: 'guide_category_name') String guideCategoryName,
+      @JsonKey(name: 'ebc_color') int ebcColor});
 }
 
 /// @nodoc
@@ -204,6 +207,7 @@ class _$BeerCopyWithImpl<$Res, $Val extends Beer>
     Object? barMenuCategory = null,
     Object? guideStyleName = null,
     Object? guideCategoryName = null,
+    Object? ebcColor = null,
   }) {
     return _then(_value.copyWith(
       beerName: null == beerName
@@ -222,6 +226,10 @@ class _$BeerCopyWithImpl<$Res, $Val extends Beer>
           ? _value.guideCategoryName
           : guideCategoryName // ignore: cast_nullable_to_non_nullable
               as String,
+      ebcColor: null == ebcColor
+          ? _value.ebcColor
+          : ebcColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -237,7 +245,8 @@ abstract class _$$BeerImplCopyWith<$Res> implements $BeerCopyWith<$Res> {
       {@JsonKey(name: 'beer_name') String beerName,
       @JsonKey(name: 'bar_menu_category') String barMenuCategory,
       @JsonKey(name: 'guide_style_name') String guideStyleName,
-      @JsonKey(name: 'guide_category_name') String guideCategoryName});
+      @JsonKey(name: 'guide_category_name') String guideCategoryName,
+      @JsonKey(name: 'ebc_color') int ebcColor});
 }
 
 /// @nodoc
@@ -254,6 +263,7 @@ class __$$BeerImplCopyWithImpl<$Res>
     Object? barMenuCategory = null,
     Object? guideStyleName = null,
     Object? guideCategoryName = null,
+    Object? ebcColor = null,
   }) {
     return _then(_$BeerImpl(
       beerName: null == beerName
@@ -272,6 +282,10 @@ class __$$BeerImplCopyWithImpl<$Res>
           ? _value.guideCategoryName
           : guideCategoryName // ignore: cast_nullable_to_non_nullable
               as String,
+      ebcColor: null == ebcColor
+          ? _value.ebcColor
+          : ebcColor // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -283,7 +297,8 @@ class _$BeerImpl implements _Beer {
       {@JsonKey(name: 'beer_name') required this.beerName,
       @JsonKey(name: 'bar_menu_category') required this.barMenuCategory,
       @JsonKey(name: 'guide_style_name') required this.guideStyleName,
-      @JsonKey(name: 'guide_category_name') required this.guideCategoryName});
+      @JsonKey(name: 'guide_category_name') required this.guideCategoryName,
+      @JsonKey(name: 'ebc_color') required this.ebcColor});
 
   factory _$BeerImpl.fromJson(Map<String, dynamic> json) =>
       _$$BeerImplFromJson(json);
@@ -300,10 +315,13 @@ class _$BeerImpl implements _Beer {
   @override
   @JsonKey(name: 'guide_category_name')
   final String guideCategoryName;
+  @override
+  @JsonKey(name: 'ebc_color')
+  final int ebcColor;
 
   @override
   String toString() {
-    return 'Beer(beerName: $beerName, barMenuCategory: $barMenuCategory, guideStyleName: $guideStyleName, guideCategoryName: $guideCategoryName)';
+    return 'Beer(beerName: $beerName, barMenuCategory: $barMenuCategory, guideStyleName: $guideStyleName, guideCategoryName: $guideCategoryName, ebcColor: $ebcColor)';
   }
 
   @override
@@ -318,13 +336,15 @@ class _$BeerImpl implements _Beer {
             (identical(other.guideStyleName, guideStyleName) ||
                 other.guideStyleName == guideStyleName) &&
             (identical(other.guideCategoryName, guideCategoryName) ||
-                other.guideCategoryName == guideCategoryName));
+                other.guideCategoryName == guideCategoryName) &&
+            (identical(other.ebcColor, ebcColor) ||
+                other.ebcColor == ebcColor));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beerName, barMenuCategory,
-      guideStyleName, guideCategoryName);
+      guideStyleName, guideCategoryName, ebcColor);
 
   @JsonKey(ignore: true)
   @override
@@ -346,7 +366,8 @@ abstract class _Beer implements Beer {
       @JsonKey(name: 'bar_menu_category') required final String barMenuCategory,
       @JsonKey(name: 'guide_style_name') required final String guideStyleName,
       @JsonKey(name: 'guide_category_name')
-      required final String guideCategoryName}) = _$BeerImpl;
+      required final String guideCategoryName,
+      @JsonKey(name: 'ebc_color') required final int ebcColor}) = _$BeerImpl;
 
   factory _Beer.fromJson(Map<String, dynamic> json) = _$BeerImpl.fromJson;
 
@@ -362,6 +383,9 @@ abstract class _Beer implements Beer {
   @override
   @JsonKey(name: 'guide_category_name')
   String get guideCategoryName;
+  @override
+  @JsonKey(name: 'ebc_color')
+  int get ebcColor;
   @override
   @JsonKey(ignore: true)
   _$$BeerImplCopyWith<_$BeerImpl> get copyWith =>
