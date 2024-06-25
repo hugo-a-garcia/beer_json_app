@@ -1,6 +1,41 @@
 {
   "beers": [
     {
+      "beer_name": "notBeer",
+      "bar_menu_category": "Tapbieren",
+      "guide_style_name": "",
+      "guide_category_name": "",
+      "ebc_color": 8
+    },
+    {
+      "beer_name": "Good Beer",
+      "bar_menu_category": "Tapbieren",
+      "guide_style_name": "Tap Beer",
+      "guide_category_name": "Pils",
+      "ebc_color": 8
+    },
+    {
+      "beer_name": "Amazing Beer",
+      "bar_menu_category": "Tapbieren",
+      "guide_style_name": "Tap Beer",
+      "guide_category_name": "Pils",
+      "ebc_color": 8
+    },
+    {
+      "beer_name": "Awesome Beer",
+      "bar_menu_category": "Tapbieren",
+      "guide_style_name": "Tap Beer",
+      "guide_category_name": "Pils",
+      "ebc_color": 8
+    },
+    {
+      "beer_name": "notBeer",
+      "bar_menu_category": "Trappistenbieren",
+      "guide_style_name": "",
+      "guide_category_name": "",
+      "ebc_color": 8
+    },
+    {
       "beer_name": "Chimay Blauw",
       "bar_menu_category": "Trappistenbieren",
       "guide_style_name": "Belgian Dark Strong Ale",
