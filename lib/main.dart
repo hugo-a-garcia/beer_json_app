@@ -1,5 +1,14 @@
-import 'package:beer_json_app/widgets/beer_list.dart';
+import 'package:beer_json_app/scrrens/frame_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+final theme = ThemeData(
+  colorScheme: ColorScheme.fromSeed(
+    brightness: Brightness.dark,
+    seedColor: const Color.fromARGB(255, 131, 57, 0),
+  ),
+  textTheme: GoogleFonts.latoTextTheme(),
+);
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +20,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: BeerList(),
+      home: FrameScreen(),
     );
   }
 }
