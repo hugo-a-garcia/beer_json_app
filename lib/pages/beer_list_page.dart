@@ -4,14 +4,14 @@ import 'package:beer_json_app/widgets/beer_list_item.dart';
 import 'package:beer_json_app/widgets/menu_category.dart';
 import 'package:flutter/material.dart';
 
-class BeerList extends StatefulWidget {
-  const BeerList({super.key});
+class BeerListPage extends StatefulWidget {
+  const BeerListPage({super.key});
 
   @override
-  State<BeerList> createState() => _BeerListState();
+  State<BeerListPage> createState() => _BeerListPageState();
 }
 
-class _BeerListState extends State<BeerList> {
+class _BeerListPageState extends State<BeerListPage> {
   late Future<BeerMenu> beerMenu;
 
   @override

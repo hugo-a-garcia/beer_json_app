@@ -1,5 +1,5 @@
-import 'package:beer_json_app/pages/beer_guide_stateful.dart';
-import 'package:beer_json_app/pages/beer_list.dart';
+import 'package:beer_json_app/pages/beer_guide_page.dart';
+import 'package:beer_json_app/pages/beer_list_page.dart';
 import 'package:flutter/material.dart';
 
 class FrameScreen extends StatefulWidget {
@@ -11,8 +11,8 @@ class FrameScreen extends StatefulWidget {
 
 class _FrameScreenState extends State<FrameScreen> {
   final List<Widget> _pages = [
-    const BeerGuideStateful(),
-    const BeerList(),
+    const BeerGuidePage(),
+    const BeerListPage(),
   ];
 
   int _selectedPageIndex = 0;

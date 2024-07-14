@@ -2,14 +2,14 @@ import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
 import 'package:beer_json_app/model/model_storage.dart';
 import 'package:flutter/material.dart';
 
-class BeerGuideStateful extends StatefulWidget {
-  const BeerGuideStateful({super.key});
+class BeerGuidePage extends StatefulWidget {
+  const BeerGuidePage({super.key});
 
   @override
-  State<BeerGuideStateful> createState() => _BeerGuideStatefulState();
+  State<BeerGuidePage> createState() => _BeerGuidePageState();
 }
 
-class _BeerGuideStatefulState extends State<BeerGuideStateful> {
+class _BeerGuidePageState extends State<BeerGuidePage> {
   late Future<BJCP21> guide;
 
   @override
