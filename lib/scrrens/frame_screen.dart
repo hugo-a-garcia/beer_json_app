@@ -11,7 +11,7 @@ class FrameScreen extends StatefulWidget {
 
 class _FrameScreenState extends State<FrameScreen> {
   final List<Widget> _pages = [
-    const BeerGuidePage(),
+    const BeerGuide(),
     const BeerListPage(),
   ];
 
