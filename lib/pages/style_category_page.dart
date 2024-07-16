@@ -13,29 +13,69 @@ class StyleCategoryPage extends ConsumerWidget {
 
     return Center(
       child: switch (asyncValue) {
-        AsyncData(:final value) => _foo(context, value),
+        AsyncData(:final value) => _makeList(context, value),
         AsyncError() => const Text('Oops, something unexpected happened'),
         _ => const CircularProgressIndicator(),
       },
     );
   }
 
-  Widget _foo(BuildContext ctx, Map<String, StyleCategory> map) {
+  Widget _makeList(BuildContext ctx, Map<String, StyleCategory> map) {
     List<StyleCategory> styleCategories = map.values.toList();
-    return ListView.builder(
-        itemCount: styleCategories.length,
-        itemBuilder: (context, index) {
-          return Row(
-            children: [
-              Text(styleCategories[index].categoryName),
-              // const SizedBox(width: 5),
-              // Text(value.beerjson.styles[index].category),
-              // const SizedBox(width: 5),
-              // Text(value.beerjson.styles[index].styleId),
-              // const SizedBox(width: 5),
-              // Text(value.beerjson.styles[index].name),
-            ],
-          );
-        });
+    return Expanded(
+      child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: styleCategories.length,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                ListTile(
+                  title: Text(styleCategories[index].categoryName),
+                  tileColor: Colors.amber,
+                ),
+                ListView.builder(
+                    physics: const ClampingScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, secondIndex) {
+                      return const ListTile(
+                        title: Text('data'),
+                      );
+                    }),
+              ],
+            );
+          }),
+    );
   }
+
+  // @override
+  // Widget build(BuildContext context, WidgetRef ref) {
+  //   return Container(
+  //     child: Column(
+  //       mainAxisSize: MainAxisSize.min,
+  //       children: <Widget>[
+  //         Expanded(
+  //           child: ListView.builder(
+  //               shrinkWrap: true,
+  //               itemCount: 123,
+  //               itemBuilder: (BuildContext context, int index) {
+  //                 return Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: <Widget>[
+  //                     Text('Parent'),
+  //                     ListView.builder(
+  //                         itemCount: 2,
+  //                         physics: ClampingScrollPhysics(),
+  //                         shrinkWrap: true,
+  //                         itemBuilder: (BuildContext context, int index) {
+  //                           return Text('Child');
+  //                         }),
+  //                   ],
+  //                 );
+  //               }),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 }
