@@ -1,5 +1,6 @@
 import 'package:beer_json_app/model/beer_json/style_category.dart';
 import 'package:beer_json_app/providers/guid_provider.dart';
+import 'package:beer_json_app/widgets/menu_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,71 +12,55 @@ class StyleCategoryPage extends ConsumerWidget {
     final AsyncValue<Map<String, StyleCategory>> asyncValue =
         ref.watch(categoryProvider);
 
-    return Center(
-      child: switch (asyncValue) {
-        AsyncData(:final value) => _makeList(context, value),
-        AsyncError() => const Text('Oops, something unexpected happened'),
-        _ => const CircularProgressIndicator(),
+    return Column(
+      children: [
+        const MultipleChoice(),
+        switch (asyncValue) {
+          AsyncData(:final value) => MenuList(value),
+          AsyncError() => const Text('Oops, something unexpected happened'),
+          _ => const CircularProgressIndicator(),
+        },
+      ],
+    );
+  }
+}
+
+enum MenuFilter {
+  categoryFilter,
+  styleFilter,
+}
+
+class MultipleChoice extends StatefulWidget {
+  const MultipleChoice({super.key});
+
+  @override
+  State<MultipleChoice> createState() => _MultipleChoiceState();
+}
+
+class _MultipleChoiceState extends State<MultipleChoice> {
+  Set<MenuFilter> selection = <MenuFilter>{
+    MenuFilter.categoryFilter,
+    MenuFilter.styleFilter
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    return SegmentedButton<MenuFilter>(
+      emptySelectionAllowed: true,
+      segments: const <ButtonSegment<MenuFilter>>[
+        ButtonSegment<MenuFilter>(
+            value: MenuFilter.categoryFilter, label: Text('Categories')),
+        ButtonSegment<MenuFilter>(
+            value: MenuFilter.styleFilter, label: Text('Styles')),
+      ],
+      selected: selection,
+      onSelectionChanged: (Set<MenuFilter> newSelection) {
+        setState(() {
+          selection = newSelection;
+          print(selection);
+        });
       },
+      multiSelectionEnabled: true,
     );
   }
-
-  Widget _makeList(BuildContext ctx, Map<String, StyleCategory> map) {
-    List<StyleCategory> styleCategories = map.values.toList();
-    return Expanded(
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: styleCategories.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                ListTile(
-                  title: Text(styleCategories[index].categoryName),
-                  tileColor: Colors.amber,
-                ),
-                ListView.builder(
-                    physics: const ClampingScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: 4,
-                    itemBuilder: (BuildContext context, secondIndex) {
-                      return const ListTile(
-                        title: Text('data'),
-                      );
-                    }),
-              ],
-            );
-          }),
-    );
-  }
-
-  // @override
-  // Widget build(BuildContext context, WidgetRef ref) {
-  //   return Container(
-  //     child: Column(
-  //       mainAxisSize: MainAxisSize.min,
-  //       children: <Widget>[
-  //         Expanded(
-  //           child: ListView.builder(
-  //               shrinkWrap: true,
-  //               itemCount: 123,
-  //               itemBuilder: (BuildContext context, int index) {
-  //                 return Column(
-  //                   crossAxisAlignment: CrossAxisAlignment.start,
-  //                   children: <Widget>[
-  //                     Text('Parent'),
-  //                     ListView.builder(
-  //                         itemCount: 2,
-  //                         physics: ClampingScrollPhysics(),
-  //                         shrinkWrap: true,
-  //                         itemBuilder: (BuildContext context, int index) {
-  //                           return Text('Child');
-  //                         }),
-  //                   ],
-  //                 );
-  //               }),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
 }
