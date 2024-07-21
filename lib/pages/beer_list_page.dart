@@ -22,26 +22,31 @@ class _BeerListPageState extends State<BeerListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: beerMenu,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return ListView.builder(
-            itemCount: snapshot.data!.beers.length,
-            itemBuilder: (context, index) {
-              if (snapshot.data!.beers[index].beerName == 'notBeer') {
-                return BarMenuCategory(
-                  snapshot.data!.beers[index].barMenuCategory,
-                );
-              }
-              return BeerItem(snapshot.data!.beers[index]);
-            },
-          );
-        } else if (snapshot.hasError) {
-          return Text('${snapshot.error}');
-        }
-        return const CircularProgressIndicator();
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Beer List'),
+      ),
+      body: FutureBuilder(
+        future: beerMenu,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+              itemCount: snapshot.data!.beers.length,
+              itemBuilder: (context, index) {
+                if (snapshot.data!.beers[index].beerName == 'notBeer') {
+                  return BarMenuCategory(
+                    snapshot.data!.beers[index].barMenuCategory,
+                  );
+                }
+                return BeerItem(snapshot.data!.beers[index]);
+              },
+            );
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          }
+          return const CircularProgressIndicator();
+        },
+      ),
     );
   }
 }

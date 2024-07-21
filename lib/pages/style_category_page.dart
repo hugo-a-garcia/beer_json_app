@@ -12,15 +12,20 @@ class StyleCategoryPage extends ConsumerWidget {
     final AsyncValue<Map<String, StyleCategory>> asyncValue =
         ref.watch(categoryProvider);
 
-    return Column(
-      children: [
-        const MultipleChoice(),
-        switch (asyncValue) {
-          AsyncData(:final value) => MenuList(value),
-          AsyncError() => const Text('Oops, something unexpected happened'),
-          _ => const CircularProgressIndicator(),
-        },
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Categories and Styles'),
+      ),
+      body: Column(
+        children: [
+          const MultipleChoice(),
+          switch (asyncValue) {
+            AsyncData(:final value) => MenuList(value),
+            AsyncError() => const Text('Oops, something unexpected happened'),
+            _ => const CircularProgressIndicator(),
+          },
+        ],
+      ),
     );
   }
 }
@@ -57,7 +62,7 @@ class _MultipleChoiceState extends State<MultipleChoice> {
       onSelectionChanged: (Set<MenuFilter> newSelection) {
         setState(() {
           selection = newSelection;
-          print(selection);
+          //print(selection);
         });
       },
       multiSelectionEnabled: true,
