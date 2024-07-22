@@ -26,12 +26,6 @@ void main() {
     // json['beer_menu']['beers'][0]
     BeerMenu beerMenu = await getBeerMenu();
     expect(json['beers'][0]['beer_name'], beerMenu.beers[0].beerName);
-    expect(json['beers'][0]['bar_menu_category'],
-        beerMenu.beers[0].barMenuCategory);
-    expect(
-        json['beers'][0]['guide_style_name'], beerMenu.beers[0].guideStyleName);
-    expect(json['beers'][0]['guide_category_name'],
-        beerMenu.beers[0].guideCategoryName);
     expect(json['beers'][0]['ebc_color'], beerMenu.beers[0].ebcColor);
   });
 }

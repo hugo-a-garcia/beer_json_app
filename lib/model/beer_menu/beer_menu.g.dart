@@ -20,17 +20,15 @@ Map<String, dynamic> _$$BeerMenuImplToJson(_$BeerMenuImpl instance) =>
 
 _$BeerImpl _$$BeerImplFromJson(Map<String, dynamic> json) => _$BeerImpl(
       beerName: json['beer_name'] as String,
-      barMenuCategory: json['bar_menu_category'] as String,
-      guideStyleName: json['guide_style_name'] as String,
-      guideCategoryName: json['guide_category_name'] as String,
+      beerId: json['beer_id'] as String,
+      guideStyleId: json['guide_style_id'] as String,
       ebcColor: (json['ebc_color'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$BeerImplToJson(_$BeerImpl instance) =>
     <String, dynamic>{
       'beer_name': instance.beerName,
-      'bar_menu_category': instance.barMenuCategory,
-      'guide_style_name': instance.guideStyleName,
-      'guide_category_name': instance.guideCategoryName,
+      'beer_id': instance.beerId,
+      'guide_style_id': instance.guideStyleId,
       'ebc_color': instance.ebcColor,
     };

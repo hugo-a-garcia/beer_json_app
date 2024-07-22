@@ -17,9 +17,8 @@ class BeerMenu with _$BeerMenu {
 class Beer with _$Beer {
   factory Beer({
     @JsonKey(name: 'beer_name') required String beerName,
-    @JsonKey(name: 'bar_menu_category') required String barMenuCategory,
-    @JsonKey(name: 'guide_style_name') required String guideStyleName,
-    @JsonKey(name: 'guide_category_name') required String guideCategoryName,
+    @JsonKey(name: 'beer_id') required String beerId,
+    @JsonKey(name: 'guide_style_id') required String guideStyleId,
     @JsonKey(name: 'ebc_color') required int ebcColor,
   }) = _Beer;
 

@@ -1,7 +1,7 @@
 {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "A representation of a person, company, organization, or place",
+  "description": "List of beers in a bar",
   "type": "object",
   "properties": {
     "beers": {
@@ -12,22 +12,18 @@
   "$defs": {
     "beer": {
       "type": "object",
-      "required": ["beer_name", "bar_menu_category"],
+      "required": ["beer_name","beer_id","guide_style_id"],
       "properties": {
         "beer_name": {
           "description": "The name of the beer",
           "type": "string"
         },
-        "guide_style_name": {
-          "description": "The style of beer in teh BCJP",
+        "beer_id": {
+          "description": "The beer id in Belgina Beer",
           "type": "string"
         },
-        "guide_category_name": {
-          "description": "The categroy in the the BCJP",
-          "type": "string"
-        },
-        "bar_menu_category": {
-          "description": "The categroy as it appear on the menu",
+        "guide_style_id": {
+          "description": "The style id of beer in the BCJP",
           "type": "string"
         },
         "ebc_color": {
