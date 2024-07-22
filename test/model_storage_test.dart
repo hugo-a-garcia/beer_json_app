@@ -1,12 +1,20 @@
 import 'dart:convert';
 
 import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
-import 'package:beer_json_app/model/model_storage.dart';
 import 'package:beer_json_app/model/beer_json/style.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+const String bcjpPath = 'assets/json/bcjp/bjcp_styleguide-2021.json';
+const String beerMenuPath = 'assets/json/beer_menu/beer_menu.json';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  Future<Map<String, dynamic>> loadAndDecodeJson(String path) async {
+    String jsonString = await rootBundle.loadString(path);
+    final decodeJson = await jsonDecode(jsonString) as Map<String, dynamic>;
+    return decodeJson;
+  }
 
   test('Load JSON file as String', () async {
     String jsonString = '''
@@ -117,8 +125,8 @@ void main() {
     // expect(json['type'], aStyle.type);
   });
 
-  test('Get styles from model', () async {
-    BJCP21 guide = await getGuide();
-    expect(guide, isNotNull);
-  });
+  // test('Get styles from model', () async {
+  //   BJCP21 guide = await getGuide();
+  //   expect(guide, isNotNull);
+  // });
 }

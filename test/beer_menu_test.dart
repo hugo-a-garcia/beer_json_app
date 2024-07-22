@@ -1,4 +1,3 @@
-import 'package:beer_json_app/model/model_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
