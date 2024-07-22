@@ -1,5 +1,5 @@
 import 'package:beer_json_app/model/beer_json/style_category.dart';
-import 'package:beer_json_app/providers/guid_provider.dart';
+import 'package:beer_json_app/providers/bjcp_provider.dart';
 import 'package:beer_json_app/widgets/menu_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
