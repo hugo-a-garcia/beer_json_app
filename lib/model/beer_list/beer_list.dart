@@ -1,16 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'beer_menu.freezed.dart';
-part 'beer_menu.g.dart';
+part 'beer_list.freezed.dart';
+part 'beer_list.g.dart';
 
 @freezed
-class BeerMenu with _$BeerMenu {
-  factory BeerMenu({
+class BeerList with _$BeerList {
+  factory BeerList({
     required List<Beer> beers,
-  }) = _BeerMenu;
+  }) = _BeerList;
 
-  factory BeerMenu.fromJson(Map<String, dynamic> json) =>
-      _$BeerMenuFromJson(json);
+  factory BeerList.fromJson(Map<String, dynamic> json) =>
+      _$BeerListFromJson(json);
 }
 
 @freezed

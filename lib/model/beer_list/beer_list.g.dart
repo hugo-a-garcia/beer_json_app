@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'beer_menu.dart';
+part of 'beer_list.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$BeerMenuImpl _$$BeerMenuImplFromJson(Map<String, dynamic> json) =>
-    _$BeerMenuImpl(
+_$BeerListImpl _$$BeerListImplFromJson(Map<String, dynamic> json) =>
+    _$BeerListImpl(
       beers: (json['beers'] as List<dynamic>)
           .map((e) => Beer.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$BeerMenuImplToJson(_$BeerMenuImpl instance) =>
+Map<String, dynamic> _$$BeerListImplToJson(_$BeerListImpl instance) =>
     <String, dynamic>{
       'beers': instance.beers,
     };

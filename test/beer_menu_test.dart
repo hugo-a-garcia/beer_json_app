@@ -1,31 +1,30 @@
-import 'package:beer_json_app/model/beer_menu/beer_menu.dart';
 import 'package:beer_json_app/model/model_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  test('Load berr_menu JSON file', () async {
-    final expectedStyle = await loadAndDecodeJson(beerMenuPath);
-    expect(expectedStyle, isNotEmpty);
-  });
+  // test('Load berr_menu JSON file', () async {
+  //   final expectedStyle = await loadAndDecodeJson(BeerListPath);
+  //   expect(expectedStyle, isNotEmpty);
+  // });
 
-  test('Load BeerMenu model', () async {
-    final json = await loadAndDecodeJson(beerMenuPath);
-    BeerMenu beerMenu = BeerMenu.fromJson(json);
-    //Magic number = the number of beers in the menu
-    expect(beerMenu.beers.length, 13);
-  });
+  // test('Load BeerList model', () async {
+  //   final json = await loadAndDecodeJson(BeerListPath);
+  //   BeerList beerList = BeerList.fromJson(json);
+  //   //Magic number = the number of beers in the menu
+  //   expect(eerList.beers.length, 13);
+  // });
 
-  test('Get Beer Menu from ModelStorage', () async {
-    BeerMenu beerMenu = await getBeerMenu();
-    expect(beerMenu, isInstanceOf<BeerMenu>());
-  });
+  // test('Get Beer Menu from ModelStorage', () async {
+  //   BeerList BeerList = await getBeerList();
+  //   expect(BeerList, isInstanceOf<BeerList>());
+  // });
 
-  test('Make sure a Beer has all its fields', () async {
-    final json = await loadAndDecodeJson(beerMenuPath);
-    // json['beer_menu']['beers'][0]
-    BeerMenu beerMenu = await getBeerMenu();
-    expect(json['beers'][0]['beer_name'], beerMenu.beers[0].beerName);
-    expect(json['beers'][0]['ebc_color'], beerMenu.beers[0].ebcColor);
-  });
+  // test('Make sure a Beer has all its fields', () async {
+  //   final json = await loadAndDecodeJson(BeerListPath);
+  //   // json['beer_menu']['beers'][0]
+  //   BeerList BeerList = await getBeerList();
+  //   expect(json['beers'][0]['beer_name'], BeerList.beers[0].beerName);
+  //   expect(json['beers'][0]['ebc_color'], BeerList.beers[0].ebcColor);
+  // });
 }

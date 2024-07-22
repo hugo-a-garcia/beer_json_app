@@ -1,4 +1,4 @@
-import 'package:beer_json_app/model/beer_menu/beer_menu.dart';
+import 'package:beer_json_app/model/beer_list/beer_list.dart';
 import 'package:beer_json_app/model/model_storage.dart';
 import 'package:beer_json_app/widgets/beer_list_item.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ class BeerListPage extends StatefulWidget {
 }
 
 class _BeerListPageState extends State<BeerListPage> {
-  late Future<BeerMenu> beerMenu;
+  late Future<BeerList> beerMenu;
 
   @override
   void initState() {

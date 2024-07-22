@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:beer_json_app/model/beer_json/bjcp_21.dart';
 import 'package:beer_json_app/model/beer_json/style.dart';
-import 'package:beer_json_app/model/beer_menu/beer_menu.dart';
+import 'package:beer_json_app/model/beer_list/beer_list.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 const String bcjpPath = 'assets/json/bcjp/bjcp_styleguide-2021.json';
@@ -32,8 +32,8 @@ List<String> getStyleNames() {
   return names;
 }
 
-Future<BeerMenu> getBeerMenu() async {
+Future<BeerList> getBeerMenu() async {
   Map<String, dynamic> jasonString = await loadAndDecodeJson(beerMenuPath);
-  BeerMenu beerMenu = BeerMenu.fromJson(jasonString);
-  return beerMenu;
+  BeerList beerList = BeerList.fromJson(jasonString);
+  return beerList;
 }
