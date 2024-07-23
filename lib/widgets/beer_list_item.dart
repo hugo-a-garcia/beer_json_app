@@ -1,4 +1,4 @@
-import 'package:beer_json_app/model/beer_list/beer_list.dart';
+import 'package:beer_json_app/model/beer.dart';
 import 'package:beer_json_app/model/ebc_colors.dart';
 import 'package:flutter/material.dart';
 

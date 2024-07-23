@@ -21,6 +21,7 @@ BeerList _$BeerListFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BeerList {
   List<Beer> get beers => throw _privateConstructorUsedError;
+  set beers(List<Beer> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -86,7 +87,7 @@ class __$$BeerListImplCopyWithImpl<$Res>
   }) {
     return _then(_$BeerListImpl(
       beers: null == beers
-          ? _value._beers
+          ? _value.beers
           : beers // ignore: cast_nullable_to_non_nullable
               as List<Beer>,
     ));
@@ -96,36 +97,18 @@ class __$$BeerListImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$BeerListImpl implements _BeerList {
-  _$BeerListImpl({required final List<Beer> beers}) : _beers = beers;
+  _$BeerListImpl({required this.beers});
 
   factory _$BeerListImpl.fromJson(Map<String, dynamic> json) =>
       _$$BeerListImplFromJson(json);
 
-  final List<Beer> _beers;
   @override
-  List<Beer> get beers {
-    if (_beers is EqualUnmodifiableListView) return _beers;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_beers);
-  }
+  List<Beer> beers;
 
   @override
   String toString() {
     return 'BeerList(beers: $beers)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BeerListImpl &&
-            const DeepCollectionEquality().equals(other._beers, _beers));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_beers));
 
   @JsonKey(ignore: true)
   @override
@@ -142,226 +125,16 @@ class _$BeerListImpl implements _BeerList {
 }
 
 abstract class _BeerList implements BeerList {
-  factory _BeerList({required final List<Beer> beers}) = _$BeerListImpl;
+  factory _BeerList({required List<Beer> beers}) = _$BeerListImpl;
 
   factory _BeerList.fromJson(Map<String, dynamic> json) =
       _$BeerListImpl.fromJson;
 
   @override
   List<Beer> get beers;
+  set beers(List<Beer> value);
   @override
   @JsonKey(ignore: true)
   _$$BeerListImplCopyWith<_$BeerListImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Beer _$BeerFromJson(Map<String, dynamic> json) {
-  return _Beer.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Beer {
-  @JsonKey(name: 'beer_name')
-  String get beerName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'beer_id')
-  String get beerId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'guide_style_id')
-  String get guideStyleId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'ebc_color')
-  int get ebcColor => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $BeerCopyWith<Beer> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $BeerCopyWith<$Res> {
-  factory $BeerCopyWith(Beer value, $Res Function(Beer) then) =
-      _$BeerCopyWithImpl<$Res, Beer>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'beer_name') String beerName,
-      @JsonKey(name: 'beer_id') String beerId,
-      @JsonKey(name: 'guide_style_id') String guideStyleId,
-      @JsonKey(name: 'ebc_color') int ebcColor});
-}
-
-/// @nodoc
-class _$BeerCopyWithImpl<$Res, $Val extends Beer>
-    implements $BeerCopyWith<$Res> {
-  _$BeerCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beerName = null,
-    Object? beerId = null,
-    Object? guideStyleId = null,
-    Object? ebcColor = null,
-  }) {
-    return _then(_value.copyWith(
-      beerName: null == beerName
-          ? _value.beerName
-          : beerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      beerId: null == beerId
-          ? _value.beerId
-          : beerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      guideStyleId: null == guideStyleId
-          ? _value.guideStyleId
-          : guideStyleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      ebcColor: null == ebcColor
-          ? _value.ebcColor
-          : ebcColor // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$BeerImplCopyWith<$Res> implements $BeerCopyWith<$Res> {
-  factory _$$BeerImplCopyWith(
-          _$BeerImpl value, $Res Function(_$BeerImpl) then) =
-      __$$BeerImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'beer_name') String beerName,
-      @JsonKey(name: 'beer_id') String beerId,
-      @JsonKey(name: 'guide_style_id') String guideStyleId,
-      @JsonKey(name: 'ebc_color') int ebcColor});
-}
-
-/// @nodoc
-class __$$BeerImplCopyWithImpl<$Res>
-    extends _$BeerCopyWithImpl<$Res, _$BeerImpl>
-    implements _$$BeerImplCopyWith<$Res> {
-  __$$BeerImplCopyWithImpl(_$BeerImpl _value, $Res Function(_$BeerImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beerName = null,
-    Object? beerId = null,
-    Object? guideStyleId = null,
-    Object? ebcColor = null,
-  }) {
-    return _then(_$BeerImpl(
-      beerName: null == beerName
-          ? _value.beerName
-          : beerName // ignore: cast_nullable_to_non_nullable
-              as String,
-      beerId: null == beerId
-          ? _value.beerId
-          : beerId // ignore: cast_nullable_to_non_nullable
-              as String,
-      guideStyleId: null == guideStyleId
-          ? _value.guideStyleId
-          : guideStyleId // ignore: cast_nullable_to_non_nullable
-              as String,
-      ebcColor: null == ebcColor
-          ? _value.ebcColor
-          : ebcColor // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$BeerImpl implements _Beer {
-  _$BeerImpl(
-      {@JsonKey(name: 'beer_name') required this.beerName,
-      @JsonKey(name: 'beer_id') required this.beerId,
-      @JsonKey(name: 'guide_style_id') required this.guideStyleId,
-      @JsonKey(name: 'ebc_color') required this.ebcColor});
-
-  factory _$BeerImpl.fromJson(Map<String, dynamic> json) =>
-      _$$BeerImplFromJson(json);
-
-  @override
-  @JsonKey(name: 'beer_name')
-  final String beerName;
-  @override
-  @JsonKey(name: 'beer_id')
-  final String beerId;
-  @override
-  @JsonKey(name: 'guide_style_id')
-  final String guideStyleId;
-  @override
-  @JsonKey(name: 'ebc_color')
-  final int ebcColor;
-
-  @override
-  String toString() {
-    return 'Beer(beerName: $beerName, beerId: $beerId, guideStyleId: $guideStyleId, ebcColor: $ebcColor)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$BeerImpl &&
-            (identical(other.beerName, beerName) ||
-                other.beerName == beerName) &&
-            (identical(other.beerId, beerId) || other.beerId == beerId) &&
-            (identical(other.guideStyleId, guideStyleId) ||
-                other.guideStyleId == guideStyleId) &&
-            (identical(other.ebcColor, ebcColor) ||
-                other.ebcColor == ebcColor));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, beerName, beerId, guideStyleId, ebcColor);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$BeerImplCopyWith<_$BeerImpl> get copyWith =>
-      __$$BeerImplCopyWithImpl<_$BeerImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$BeerImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Beer implements Beer {
-  factory _Beer(
-      {@JsonKey(name: 'beer_name') required final String beerName,
-      @JsonKey(name: 'beer_id') required final String beerId,
-      @JsonKey(name: 'guide_style_id') required final String guideStyleId,
-      @JsonKey(name: 'ebc_color') required final int ebcColor}) = _$BeerImpl;
-
-  factory _Beer.fromJson(Map<String, dynamic> json) = _$BeerImpl.fromJson;
-
-  @override
-  @JsonKey(name: 'beer_name')
-  String get beerName;
-  @override
-  @JsonKey(name: 'beer_id')
-  String get beerId;
-  @override
-  @JsonKey(name: 'guide_style_id')
-  String get guideStyleId;
-  @override
-  @JsonKey(name: 'ebc_color')
-  int get ebcColor;
-  @override
-  @JsonKey(ignore: true)
-  _$$BeerImplCopyWith<_$BeerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

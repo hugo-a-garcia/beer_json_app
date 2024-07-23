@@ -9,23 +9,28 @@ class BeerListPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<BeerList> beerList = ref.watch(beerListProvider);
+    final AsyncValue<BeerList> asyncValue = ref.watch(beerListProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Beer List'),
       ),
       body: Center(
-        child: switch (beerList) {
-          AsyncData(:final value) => ListView.builder(
-              itemCount: value.beers.length,
-              itemBuilder: (context, index) {
-                return BeerItem(value.beers[index]);
-              },
-            ),
+        child: switch (asyncValue) {
+          AsyncData(value: final beerList) => buildList(beerList),
           AsyncError() => const Text('Oops, something unexpected happened'),
           _ => const CircularProgressIndicator(),
         },
       ),
+    );
+  }
+
+  Widget buildList(BeerList beerList) {
+    beerList.beers.sort();
+    return ListView.builder(
+      itemCount: beerList.beers.length,
+      itemBuilder: (context, index) {
+        return BeerItem(beerList.beers[index]);
+      },
     );
   }
 }
