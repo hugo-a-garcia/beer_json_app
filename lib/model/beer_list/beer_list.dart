@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'beer_list.freezed.dart';
 part 'beer_list.g.dart';
 
-@unfreezed
+@freezed
 class BeerList with _$BeerList {
   factory BeerList({
     required List<Beer> beers,

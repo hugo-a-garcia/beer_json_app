@@ -1,3 +1,4 @@
+import 'package:beer_json_app/model/beer.dart';
 import 'package:beer_json_app/model/beer_list/beer_list.dart';
 import 'package:beer_json_app/providers/beer_list_provider.dart';
 import 'package:beer_json_app/widgets/beer_list_item.dart';
@@ -25,11 +26,12 @@ class BeerListPage extends ConsumerWidget {
   }
 
   Widget buildList(BeerList beerList) {
-    beerList.beers.sort();
+    List<Beer> beers = List.from(beerList.beers);
+    beers.sort();
     return ListView.builder(
-      itemCount: beerList.beers.length,
+      itemCount: beers.length,
       itemBuilder: (context, index) {
-        return BeerItem(beerList.beers[index]);
+        return BeerItem(beers[index]);
       },
     );
   }

@@ -21,7 +21,6 @@ BeerList _$BeerListFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$BeerList {
   List<Beer> get beers => throw _privateConstructorUsedError;
-  set beers(List<Beer> value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -87,7 +86,7 @@ class __$$BeerListImplCopyWithImpl<$Res>
   }) {
     return _then(_$BeerListImpl(
       beers: null == beers
-          ? _value.beers
+          ? _value._beers
           : beers // ignore: cast_nullable_to_non_nullable
               as List<Beer>,
     ));
@@ -97,18 +96,36 @@ class __$$BeerListImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$BeerListImpl implements _BeerList {
-  _$BeerListImpl({required this.beers});
+  _$BeerListImpl({required final List<Beer> beers}) : _beers = beers;
 
   factory _$BeerListImpl.fromJson(Map<String, dynamic> json) =>
       _$$BeerListImplFromJson(json);
 
+  final List<Beer> _beers;
   @override
-  List<Beer> beers;
+  List<Beer> get beers {
+    if (_beers is EqualUnmodifiableListView) return _beers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_beers);
+  }
 
   @override
   String toString() {
     return 'BeerList(beers: $beers)';
   }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BeerListImpl &&
+            const DeepCollectionEquality().equals(other._beers, _beers));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_beers));
 
   @JsonKey(ignore: true)
   @override
@@ -125,14 +142,13 @@ class _$BeerListImpl implements _BeerList {
 }
 
 abstract class _BeerList implements BeerList {
-  factory _BeerList({required List<Beer> beers}) = _$BeerListImpl;
+  factory _BeerList({required final List<Beer> beers}) = _$BeerListImpl;
 
   factory _BeerList.fromJson(Map<String, dynamic> json) =
       _$BeerListImpl.fromJson;
 
   @override
   List<Beer> get beers;
-  set beers(List<Beer> value);
   @override
   @JsonKey(ignore: true)
   _$$BeerListImplCopyWith<_$BeerListImpl> get copyWith =>
