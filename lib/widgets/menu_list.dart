@@ -2,31 +2,53 @@ import 'package:beer_json_app/model/beer_json/style_category.dart';
 import 'package:flutter/material.dart';
 
 class MenuList extends StatelessWidget {
-  const MenuList(this.map, {super.key});
+  const MenuList(this.styleCategoryList, {super.key});
 
-  final Map<String, StyleCategory> map;
+  final List<StyleCategory> styleCategoryList;
 
   @override
   Widget build(BuildContext context) {
-    List<StyleCategory> styleCategories = map.values.toList();
+    List<StyleCategory> styleCategories = styleCategoryList;
     return Expanded(
+      //Category Listview
       child: ListView.builder(
           shrinkWrap: true,
           itemCount: styleCategories.length,
           itemBuilder: (context, index) {
+            // Category Column
+            String styleCategory = styleCategories[index].categoryName;
             return Column(
               children: [
+                // Category ListItem
                 ListTile(
-                  title: Text(styleCategories[index].categoryName),
+                  title: Text(styleCategory),
                   tileColor: Colors.amber,
                 ),
+                //Style ListBuilder
                 ListView.builder(
                     physics: const ClampingScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: 4,
                     itemBuilder: (BuildContext context, secondIndex) {
-                      return const ListTile(
-                        title: Text('data'),
+                      //Style Column
+                      return Column(
+                        children: [
+                          //Style ListTile
+                          const ListTile(
+                            title: Text('data'),
+                          ),
+                          //Beer ListView
+                          ListView.builder(
+                            physics: const ClampingScrollPhysics(),
+                            shrinkWrap: true,
+                            itemCount: 4,
+                            itemBuilder: (BuildContext context, int index) {
+                              //Beer ListTile
+                              return const Text('beer');
+                            },
+                          ),
+                        ],
+                        //Beer ListBuilder
                       );
                     }),
               ],

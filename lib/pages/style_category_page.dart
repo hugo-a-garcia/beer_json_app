@@ -1,5 +1,5 @@
 import 'package:beer_json_app/model/beer_json/style_category.dart';
-import 'package:beer_json_app/providers/bjcp_provider.dart';
+import 'package:beer_json_app/providers/style_category_provider.dart';
 import 'package:beer_json_app/widgets/menu_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,8 +9,8 @@ class StyleCategoryPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<Map<String, StyleCategory>> asyncValue =
-        ref.watch(categoryProvider);
+    final AsyncValue<List<StyleCategory>> asyncValue =
+        ref.watch(styleCategoryProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -30,6 +30,7 @@ class StyleCategoryPage extends ConsumerWidget {
   }
 }
 
+/// Buttons
 enum MenuFilter {
   categoryFilter,
   styleFilter,
