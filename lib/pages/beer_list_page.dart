@@ -1,5 +1,4 @@
 import 'package:beer_json_app/model/beer.dart';
-import 'package:beer_json_app/model/beer_list/beer_list.dart';
 import 'package:beer_json_app/providers/beer_list_provider.dart';
 import 'package:beer_json_app/widgets/beer_list_item.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ class BeerListPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<BeerList> asyncValue = ref.watch(beerListProvider);
+    final AsyncValue<List<Beer>> asyncValue = ref.watch(beerListProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Beer List'),
@@ -25,8 +24,8 @@ class BeerListPage extends ConsumerWidget {
     );
   }
 
-  Widget buildList(BeerList beerList) {
-    List<Beer> beers = List.from(beerList.beers);
+  Widget buildList(List<Beer> beerList) {
+    List<Beer> beers = List.from(beerList);
     beers.sort();
     return ListView.builder(
       itemCount: beers.length,

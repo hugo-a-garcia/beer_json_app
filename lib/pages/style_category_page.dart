@@ -1,4 +1,4 @@
-import 'package:beer_json_app/model/beer_json/style_category.dart';
+import 'package:beer_json_app/model/menu_view.dart';
 import 'package:beer_json_app/providers/style_category_provider.dart';
 import 'package:beer_json_app/widgets/menu_list.dart';
 import 'package:flutter/material.dart';
@@ -9,12 +9,11 @@ class StyleCategoryPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<List<StyleCategory>> asyncValue =
-        ref.watch(styleCategoryProvider);
+    final AsyncValue<MenuView> asyncValue = ref.watch(styleCategoryProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Categories and Styles'),
+        title: const Text('Blauwe Kater Bier Kaart'),
       ),
       body: Column(
         children: [
