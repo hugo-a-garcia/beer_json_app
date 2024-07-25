@@ -22,6 +22,7 @@ Beer _$BeerFromJson(Map<String, dynamic> json) {
 mixin _$Beer {
   @JsonKey(name: 'beer_name')
   String get beerName => throw _privateConstructorUsedError;
+  String get price => throw _privateConstructorUsedError;
   @JsonKey(name: 'beer_id')
   String get beerId => throw _privateConstructorUsedError;
   @JsonKey(name: 'guide_style_id')
@@ -41,6 +42,7 @@ abstract class $BeerCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'beer_name') String beerName,
+      String price,
       @JsonKey(name: 'beer_id') String beerId,
       @JsonKey(name: 'guide_style_id') String guideStyleId,
       @JsonKey(name: 'ebc_color') int ebcColor});
@@ -60,6 +62,7 @@ class _$BeerCopyWithImpl<$Res, $Val extends Beer>
   @override
   $Res call({
     Object? beerName = null,
+    Object? price = null,
     Object? beerId = null,
     Object? guideStyleId = null,
     Object? ebcColor = null,
@@ -68,6 +71,10 @@ class _$BeerCopyWithImpl<$Res, $Val extends Beer>
       beerName: null == beerName
           ? _value.beerName
           : beerName // ignore: cast_nullable_to_non_nullable
+              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as String,
       beerId: null == beerId
           ? _value.beerId
@@ -94,6 +101,7 @@ abstract class _$$BeerImplCopyWith<$Res> implements $BeerCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'beer_name') String beerName,
+      String price,
       @JsonKey(name: 'beer_id') String beerId,
       @JsonKey(name: 'guide_style_id') String guideStyleId,
       @JsonKey(name: 'ebc_color') int ebcColor});
@@ -110,6 +118,7 @@ class __$$BeerImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? beerName = null,
+    Object? price = null,
     Object? beerId = null,
     Object? guideStyleId = null,
     Object? ebcColor = null,
@@ -118,6 +127,10 @@ class __$$BeerImplCopyWithImpl<$Res>
       beerName: null == beerName
           ? _value.beerName
           : beerName // ignore: cast_nullable_to_non_nullable
+              as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
               as String,
       beerId: null == beerId
           ? _value.beerId
@@ -140,6 +153,7 @@ class __$$BeerImplCopyWithImpl<$Res>
 class _$BeerImpl extends _Beer {
   _$BeerImpl(
       {@JsonKey(name: 'beer_name') required this.beerName,
+      required this.price,
       @JsonKey(name: 'beer_id') required this.beerId,
       @JsonKey(name: 'guide_style_id') required this.guideStyleId,
       @JsonKey(name: 'ebc_color') required this.ebcColor})
@@ -152,6 +166,8 @@ class _$BeerImpl extends _Beer {
   @JsonKey(name: 'beer_name')
   final String beerName;
   @override
+  final String price;
+  @override
   @JsonKey(name: 'beer_id')
   final String beerId;
   @override
@@ -163,7 +179,7 @@ class _$BeerImpl extends _Beer {
 
   @override
   String toString() {
-    return 'Beer(beerName: $beerName, beerId: $beerId, guideStyleId: $guideStyleId, ebcColor: $ebcColor)';
+    return 'Beer(beerName: $beerName, price: $price, beerId: $beerId, guideStyleId: $guideStyleId, ebcColor: $ebcColor)';
   }
 
   @override
@@ -173,6 +189,7 @@ class _$BeerImpl extends _Beer {
             other is _$BeerImpl &&
             (identical(other.beerName, beerName) ||
                 other.beerName == beerName) &&
+            (identical(other.price, price) || other.price == price) &&
             (identical(other.beerId, beerId) || other.beerId == beerId) &&
             (identical(other.guideStyleId, guideStyleId) ||
                 other.guideStyleId == guideStyleId) &&
@@ -183,7 +200,7 @@ class _$BeerImpl extends _Beer {
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, beerName, beerId, guideStyleId, ebcColor);
+      Object.hash(runtimeType, beerName, price, beerId, guideStyleId, ebcColor);
 
   @JsonKey(ignore: true)
   @override
@@ -202,6 +219,7 @@ class _$BeerImpl extends _Beer {
 abstract class _Beer extends Beer {
   factory _Beer(
       {@JsonKey(name: 'beer_name') required final String beerName,
+      required final String price,
       @JsonKey(name: 'beer_id') required final String beerId,
       @JsonKey(name: 'guide_style_id') required final String guideStyleId,
       @JsonKey(name: 'ebc_color') required final int ebcColor}) = _$BeerImpl;
@@ -212,6 +230,8 @@ abstract class _Beer extends Beer {
   @override
   @JsonKey(name: 'beer_name')
   String get beerName;
+  @override
+  String get price;
   @override
   @JsonKey(name: 'beer_id')
   String get beerId;

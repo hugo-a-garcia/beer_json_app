@@ -9,6 +9,7 @@ class Beer with _$Beer implements Comparable<Beer> {
 
   factory Beer({
     @JsonKey(name: 'beer_name') required String beerName,
+    required String price,
     @JsonKey(name: 'beer_id') required String beerId,
     @JsonKey(name: 'guide_style_id') required String guideStyleId,
     @JsonKey(name: 'ebc_color') required int ebcColor,

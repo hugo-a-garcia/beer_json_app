@@ -12,10 +12,14 @@
   "$defs": {
     "beer": {
       "type": "object",
-      "required": ["beer_name","beer_id","guide_style_id"],
+      "required": ["beer_name","price", "beer_id","guide_style_id"],
       "properties": {
         "beer_name": {
           "description": "The name of the beer",
+          "type": "string"
+        },
+        "price": {
+          "description": "Price of beer",
           "type": "string"
         },
         "beer_id": {

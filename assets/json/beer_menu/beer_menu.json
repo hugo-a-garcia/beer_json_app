@@ -2,78 +2,91 @@
   "beers": [
     {
       "beer_name": "Chimay Blauw",
+      "price": "6.20",
       "beer_id": "380",
       "guide_style_id": "26D",
       "ebc_color": 60
     },
     {
       "beer_name": "Chimay Wit",
+      "price": "5.30",
       "beer_id": "900",
       "guide_style_id": "26C",
       "ebc_color": 16
     },
     {
       "beer_name": "La Trappe Blond",
+      "price": "4.90",
       "beer_id": "176",
       "guide_style_id": "25A",
       "ebc_color": 11
     },
     {
       "beer_name": "La Trappe Dubbel",
+      "price": "4.90",
       "beer_id": "328",
       "guide_style_id": "26B",
       "ebc_color": 79
     },
     {
       "beer_name": "La Trappe Tripel",
+      "price": "5.10",
       "beer_id": "901",
       "guide_style_id": "26C",
       "ebc_color": 14
     },
     {
       "beer_name": "La Trappe Quadrupel",
+      "price": "57",
       "beer_id": "398",
       "guide_style_id": "26D",
       "ebc_color": 28
     },
     {
       "beer_name": "La Trappe Witte",
+      "price": "4.30",
       "beer_id": "110",
       "guide_style_id": "24A",
       "ebc_color": 6
     },
     {
       "beer_name": "Orval",
+      "price": "5.90",
       "beer_id": "550",
       "guide_style_id": "34A",
       "ebc_color": 23
     },
     {
       "beer_name": "Rochefort 6",
+      "price": "4.80",
       "beer_id": "348",
       "guide_style_id": "26B",
       "ebc_color": 31
     },
     {
       "beer_name": "Rochefort 8",
+      "price": "5.70",
       "beer_id": "404",
       "guide_style_id": "26D",
       "ebc_color": 45
     },
     {
       "beer_name": "Rochefort 10",
+      "price": "7.20",
       "beer_id": "406",
       "guide_style_id": "26D",
       "ebc_color": 76
     },
     {
       "beer_name": "Westmalle Dubbel",
+      "price": "4.40",
       "beer_id": "370",
       "guide_style_id": "26B",
       "ebc_color": 80
     },
     {
       "beer_name": "Westmalle Tripel",
+      "price": "5.50",
       "beer_id": "296",
       "guide_style_id": "26C",
       "ebc_color": 10

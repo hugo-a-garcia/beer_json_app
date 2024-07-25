@@ -80,6 +80,7 @@ class MenuList extends StatelessWidget {
                               Expanded(
                                 child: ListTile(
                                   title: Text(currentBeers[index].beerName),
+                                  trailing: Text(currentBeers[index].price),
                                 ),
                               ),
                             ],
